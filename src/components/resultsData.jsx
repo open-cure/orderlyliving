@@ -11,12 +11,13 @@ export const resultsProjects = [
     description: "Created a familiar, calming space with essential furniture, meaningful artwork, and personal touches that immediately felt like home.",
     media: {
       before: [
-        { type: "image", src: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&q=80", alt: "Before: cluttered bedroom with boxes" }
+        { src: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=1200&q=80", alt: "Before: cluttered bedroom with boxes" }
       ],
       after: [
-        { type: "image", src: "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=800&q=80", alt: "After: organized, welcoming bedroom setup" }
+        { src: "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=1200&q=80", alt: "After: organized, welcoming bedroom setup" }
       ],
-      afterVideo: { type: "mp4", src: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", isVertical: false }
+      beforeVideo: null,
+      afterVideo: null
     }
   },
   {
@@ -28,13 +29,13 @@ export const resultsProjects = [
     description: "Transformed an overwhelming garage into a functional, organized space with clear zones and easy-to-maintain systems.",
     media: {
       before: [
-        { type: "image", src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80", alt: "Before: cluttered garage with items everywhere" }
+        { src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80", alt: "Before: cluttered garage with items everywhere" }
       ],
       after: [
-        { type: "image", src: "https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=800&q=80", alt: "After: organized garage with labeled storage" }
+        { src: "https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=1200&q=80", alt: "After: organized garage with labeled storage" }
       ],
-      beforeVideo: { type: "youtube", url: "https://www.youtube.com/watch?v=jNQXAC9IVRw", isVertical: false },
-      afterVideo: { type: "youtube", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", isVertical: false }
+      beforeVideo: null,
+      afterVideo: null
     }
   },
   {
@@ -46,12 +47,13 @@ export const resultsProjects = [
     description: "Complete move-in service including furniture placement, closet organization, and decorative touches that brought comfort and familiarity.",
     media: {
       before: [
-        { type: "image", src: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80", alt: "Before: empty senior living apartment" }
+        { src: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200&q=80", alt: "Before: empty senior living apartment" }
       ],
       after: [
-        { type: "image", src: "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=800&q=80", alt: "After: fully furnished and decorated senior apartment" }
+        { src: "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=1200&q=80", alt: "After: fully furnished and decorated senior apartment" }
       ],
-      videos: []
+      beforeVideo: null,
+      afterVideo: null
     }
   },
   {
@@ -63,11 +65,49 @@ export const resultsProjects = [
     description: "Reorganized pantry with clear containers, labels, and zones that make meal prep easier and maintain order.",
     media: {
       before: [
-        { type: "image", src: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80", alt: "Before: disorganized pantry shelves" }
+        { src: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1200&q=80", alt: "Before: disorganized pantry shelves" }
       ],
       after: [
-        { type: "image", src: "https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=800&q=80", alt: "After: organized pantry with labeled containers" }
-      ]
+        { src: "https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=1200&q=80", alt: "After: organized pantry with labeled containers" }
+      ],
+      beforeVideo: null,
+      afterVideo: null
+    }
+  },
+  {
+    id: "proj-005",
+    title: "Closet Organization & Downsizing",
+    category: "Organization",
+    date: "2026-01-05",
+    location: "Beavercreek, OH",
+    description: "Helped sort through years of belongings, creating an organized closet system that makes getting dressed easy and stress-free.",
+    media: {
+      before: [
+        { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80", alt: "Before: overflowing closet with clothes piled up" }
+      ],
+      after: [
+        { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80", alt: "After: organized closet with everything visible and accessible" }
+      ],
+      beforeVideo: null,
+      afterVideo: null
+    }
+  },
+  {
+    id: "proj-006",
+    title: "Memory Care Room Setup",
+    category: "Transitions",
+    date: "2025-12-20",
+    location: "Dayton, OH",
+    description: "Designed a soothing, familiar environment with memory-friendly layouts, comforting colors, and personal keepsakes to ease the transition.",
+    media: {
+      before: [
+        { src: "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=1200&q=80", alt: "Before: stark, empty memory care room" }
+      ],
+      after: [
+        { src: "https://images.unsplash.com/photo-1616594266905-994dc0395e3b?w=1200&q=80", alt: "After: warm, personalized room with familiar items" }
+      ],
+      beforeVideo: null,
+      afterVideo: null
     }
   }
 ];

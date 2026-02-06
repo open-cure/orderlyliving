@@ -7,6 +7,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import ContactSection from '../components/ContactSection';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Loader2 } from 'lucide-react';
+import { resultsProjects, testimonials as mockTestimonials } from '../components/resultsData';
 
 export default function Results() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -27,7 +28,7 @@ export default function Results() {
       .eq('is_published', true)
       .order('sort_date', { ascending: false });
 
-    if (projectsData) {
+    if (projectsData && projectsData.length > 0) {
       // Fetch media for each project
       const projectsWithMedia = await Promise.all(
         projectsData.map(async (project) => {
@@ -81,6 +82,9 @@ export default function Results() {
       );
 
       setProjects(projectsWithMedia);
+    } else {
+      // Use mock data if no data in Supabase
+      setProjects(resultsProjects);
     }
 
     // Fetch testimonials
@@ -90,8 +94,11 @@ export default function Results() {
       .eq('is_published', true)
       .order('order_index', { ascending: false });
 
-    if (testimonialsData) {
+    if (testimonialsData && testimonialsData.length > 0) {
       setTestimonials(testimonialsData);
+    } else {
+      // Use mock testimonials if no data in Supabase
+      setTestimonials(mockTestimonials);
     }
 
     setLoading(false);
@@ -161,8 +168,8 @@ export default function Results() {
             </Tabs>
           </motion.div>
 
-          {/* Projects - One Per Row */}
-          <div className="space-y-12">
+          {/* Projects - Two Per Row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {filteredProjects.map((project, index) => (
               <ProjectCard
                 key={project.id}

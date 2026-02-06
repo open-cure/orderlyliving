@@ -15,15 +15,15 @@ export default function Transitions() {
   const testimonials = [
     {
       quote: "I cannot tell you how many people have commented that it looks like they've lived there forever and that it's beautiful.",
-      author: "Referral Partner"
+      author: "Melissa R., Referral Partner"
     },
     {
       quote: "He loves his room. That is a saving grace – thanks to you.",
-      author: "Loved One"
+      author: "Katie C., Loved One"
     },
     {
       quote: "He's been giving tours to all the employees. You are amazing.",
-      author: "Loved One"
+      author: "Katie C., Loved One"
     }
   ];
 
@@ -197,6 +197,20 @@ export default function Transitions() {
             </h2>
           </motion.div>
 
+          {/* Special Callout - Moved Above */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12 bg-sage-100 rounded-full p-8 md:p-12 text-center max-w-3xl mx-auto"
+          >
+            <p className="text-4xl md:text-5xl font-script text-gold-800 italic">
+              "Aw, it's like home."
+            </p>
+            <p className="text-sage-700 mt-2">— Paul M., Resident</p>
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard
@@ -207,20 +221,6 @@ export default function Transitions() {
               />
             ))}
           </div>
-
-          {/* Special Callout */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mt-12 bg-gold-100 border-2 border-gold-300 rounded-2xl p-8 text-center"
-          >
-            <p className="text-2xl font-script text-gold-800 italic">
-              "Aw, it's like home."
-            </p>
-            <p className="text-sage-700 mt-2">— Resident</p>
-          </motion.div>
         </div>
       </section>
 

@@ -6,16 +6,19 @@ import ServiceCard from '../components/ServiceCard';
 import ContactSection from '../components/ContactSection';
 import { Home as HomeIcon, FileText, FolderOpen, Heart, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
+import amyHeadshot from '../images/headshots/Amy-Final-Headshots-04.jpg';
+import amyOnTheJob from '../images/amy_on_the_job.jpeg';
 
 export default function Home() {
   return (
-    <div className="bg-cream-50">
+    <div>
       {/* Hero Section */}
       <Hero
         title="Orderly Living"
         subtitle="Creating calm, comfort, and organization..."
         scriptText="for Life's Big Changes"
-        image="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=800&q=80"
+        image={amyOnTheJob}
+        imagePosition="object-[center_40%]"
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
           <a
@@ -34,7 +37,7 @@ export default function Home() {
       </Hero>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-cream-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -89,9 +92,9 @@ export default function Home() {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+                  src={amyHeadshot}
                   alt="Amy Skardon"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </motion.div>

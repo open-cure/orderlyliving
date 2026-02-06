@@ -136,9 +136,9 @@ export default function Layout({ children, currentPageName }) {
                   <Phone className="h-4 w-4" />
                   <span>937-272-2344</span>
                 </a>
-                <a href="mailto:amy@orderly.living" className="flex items-center space-x-2 text-sage-200 hover:text-white transition-colors">
+                <a href="mailto:hello@orderly.living" className="flex items-center space-x-2 text-sage-200 hover:text-white transition-colors">
                   <Mail className="h-4 w-4" />
-                  <span>amy@orderly.living</span>
+                  <span>hello@orderly.living</span>
                 </a>
               </div>
             </div>

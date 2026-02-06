@@ -33,7 +33,7 @@ export default function Contact() {
   return (
     <div className="bg-cream-50 min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-sage-800 to-sage-900 text-white py-20">
+      <section className="bg-gradient-to-br from-mauve-400 to-mauve-500 text-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ export default function Contact() {
             <h1 className="text-4xl sm:text-5xl font-serif mb-4">
               Let's Get Started
             </h1>
-            <p className="text-xl text-sage-200">
+            <p className="text-xl text-gray-800">
               Ready to bring order and calm to your space? We'd love to hear from you.
             </p>
           </motion.div>
@@ -92,10 +92,10 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-sage-900 mb-1">Email</h3>
                     <a
-                      href="mailto:amy@orderly.living"
+                      href="mailto:hello@orderly.living"
                       className="text-lg text-sage-700 hover:text-sage-800 transition-colors break-all"
                     >
-                      amy@orderly.living
+                      hello@orderly.living
                     </a>
                     <p className="text-sm text-gray-600 mt-1">We'll respond within 24 hours</p>
                   </div>

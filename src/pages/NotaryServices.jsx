@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import ContactSection from '../components/ContactSection';
 import { motion } from 'framer-motion';
 import { FileCheck, MapPin, Shield, Clock } from 'lucide-react';
+import notaryImage from '../images/notary.png';
 
 export default function NotaryServices() {
   const services = [
@@ -21,7 +22,8 @@ export default function NotaryServices() {
         title="Notary Services"
         subtitle="Professional, Reliable Support"
         scriptText="for Life's Important Documents"
-        image="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80"
+        image={notaryImage}
+        imagePosition="object-top"
       >
         <p className="text-lg text-gray-700 mt-6 leading-relaxed">
           Secure, prompt, and convenient notary services for real estate transactions, estate planning, and important life documents.
