@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-export default function Hero({ title, subtitle, scriptText, image, imagePosition = 'object-center', children }) {
+export default function Hero({ title, subtitle, scriptText, location, image, imagePosition = 'object-center', children }) {
   return (
     <section className="relative bg-gradient-to-br from-cream-50 to-sage-50 overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI0U4RURFNyIgb3BhY2l0eT0iLjMiLz48L2c+PC9zdmc+')] opacity-30"></div>
@@ -15,12 +15,17 @@ export default function Hero({ title, subtitle, scriptText, image, imagePosition
             transition={{ duration: 0.6 }}
             className="text-center lg:text-left"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-sage-900 leading-tight mb-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-light tracking-widest text-brand leading-tight mb-4">
               {title}
             </h1>
             {subtitle && (
-              <p className="text-xl sm:text-2xl text-gray-700 mb-6 leading-relaxed">
+              <p className="text-xl sm:text-2xl text-gray-700 mb-2 leading-relaxed">
                 {subtitle}
+              </p>
+            )}
+            {location && (
+              <p className="text-base text-sage-700 mb-4 font-medium">
+                {location}
               </p>
             )}
             {scriptText && (

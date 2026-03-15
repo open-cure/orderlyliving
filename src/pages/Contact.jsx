@@ -76,10 +76,10 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-sage-900 mb-1">Phone</h3>
                     <a
-                      href="tel:937-272-2344"
+                      href="tel:336-673-3759"
                       className="text-lg text-sage-700 hover:text-sage-800 transition-colors"
                     >
-                      937-272-2344
+                      336-ORDERLY
                     </a>
                     <p className="text-sm text-gray-600 mt-1">Call or text anytime</p>
                   </div>
@@ -203,8 +203,7 @@ export default function Contact() {
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="transitions">Senior Transitions</SelectItem>
-                          <SelectItem value="notary">Notary Services</SelectItem>
-                          <SelectItem value="organization">Home Organization</SelectItem>
+                          <SelectItem value="notary">Loan Signing & Notary</SelectItem>
                           <SelectItem value="not-sure">Not Sure Yet</SelectItem>
                         </SelectContent>
                       </Select>

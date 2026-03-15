@@ -50,7 +50,7 @@
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import NotaryServices from './pages/NotaryServices';
-import Organization from './pages/Organization';
+// import Organization from './pages/Organization';
 import Results from './pages/Results';
 import Transitions from './pages/Transitions';
 import Admin from './pages/Admin';
@@ -61,7 +61,7 @@ export const PAGES = {
     "Contact": Contact,
     "Home": Home,
     "NotaryServices": NotaryServices,
-    "Organization": Organization,
+    // "Organization": Organization,
     "Results": Results,
     "Transitions": Transitions,
     "Admin": Admin,

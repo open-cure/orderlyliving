@@ -112,6 +112,17 @@ export default {
           800: '#96734a',
           900: '#795e3d',
         },
+        // Brand color: calm, neutral, mature, professional
+        brand: {
+          DEFAULT: '#B7A89C',
+          light: '#D4CCC4',
+          lighter: '#E8E3DE',
+          dark: '#9D8E82',
+          darker: '#8A7B6F',
+        },
+      },
+      fontFamily: {
+        serif: ['EB Garamond', 'Garamond', 'Georgia', 'serif'],
       },
     },
   },

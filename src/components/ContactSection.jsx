@@ -25,7 +25,7 @@ export default function ContactSection({ title = "Ready to Get Started?", subtit
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <a
-              href="tel:937-272-2344"
+              href="tel:336-673-3759"
               className="flex items-center space-x-2 bg-gold-500 hover:bg-gold-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-xl hover:scale-105"
             >
               <Phone className="h-5 w-5" />

@@ -8,9 +8,8 @@ export default function Layout({ children, currentPageName }) {
 
   const navItems = [
     { name: 'Home', path: 'Home' },
-    { name: 'Transitions', path: 'Transitions' },
-    { name: 'Notary Services', path: 'NotaryServices' },
-    { name: 'Organization', path: 'Organization' },
+    { name: 'Loan Signing & Notary', path: 'NotaryServices' },
+    { name: 'Senior Transitions', path: 'Transitions' },
     { name: 'Results', path: 'Results' },
     { name: 'Contact', path: 'Contact' }
   ];
@@ -22,8 +21,8 @@ export default function Layout({ children, currentPageName }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <Link to={createPageUrl('Home')} className="flex items-center space-x-2">
-              <h1 className="text-2xl font-serif text-sage-800">Orderly Living</h1>
+            <Link to={createPageUrl('Home')} className="logo-link flex items-center space-x-2">
+              <h1 className="text-2xl font-serif font-light text-brand transition-colors" style={{letterSpacing: '0.15em'}}>Orderly<span style={{letterSpacing: 0, verticalAlign: '-0.1em'}}>.</span>Living</h1>
             </Link>
 
             {/* Desktop Navigation */}
@@ -41,8 +40,7 @@ export default function Layout({ children, currentPageName }) {
                   {item.name}
                 </Link>
               ))}
-              <a
-                href="tel:937-272-2344"
+              <a href="tel:336-673-3759"
                 className="bg-gold-500 hover:bg-gold-600 text-white px-6 py-2 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md"
               >
                 Call Now
@@ -76,7 +74,7 @@ export default function Layout({ children, currentPageName }) {
                 </Link>
               ))}
               <a
-                href="tel:937-272-2344"
+                href="tel:336-673-3759"
                 className="block text-center bg-gold-500 hover:bg-gold-600 text-white px-4 py-2 rounded-full text-sm font-medium"
               >
                 Call Now
@@ -90,14 +88,17 @@ export default function Layout({ children, currentPageName }) {
       <main>{children}</main>
 
       {/* Footer */}
-      <footer className="bg-sage-900 text-white mt-20">
+      <footer className="bg-sage-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Brand */}
             <div>
-              <h3 className="text-2xl font-serif mb-4">Orderly Living</h3>
+              <h3 className="text-2xl font-serif font-light text-brand-light mb-4" style={{letterSpacing: '0.15em'}}>Orderly<span style={{letterSpacing: 0, verticalAlign: '-0.1em'}}>.</span>Living</h3>
               <p className="text-sage-200 text-sm leading-relaxed">
-                Creating calm, comfort, and organization for life's big changes.
+                Creating calm, comfort, and order for life's big changes.
+              </p>
+              <p className="text-sage-300 text-sm mt-2">
+                Serving Centerville, Dayton, and surrounding areas.
               </p>
             </div>
 
@@ -106,18 +107,13 @@ export default function Layout({ children, currentPageName }) {
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-sm">
                 <li>
+                  <Link to={createPageUrl('NotaryServices')} className="text-sage-200 hover:text-white transition-colors">
+                    Loan Signing & Notary
+                  </Link>
+                </li>
+                <li>
                   <Link to={createPageUrl('Transitions')} className="text-sage-200 hover:text-white transition-colors">
                     Senior Transitions
-                  </Link>
-                </li>
-                <li>
-                  <Link to={createPageUrl('NotaryServices')} className="text-sage-200 hover:text-white transition-colors">
-                    Notary Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to={createPageUrl('Organization')} className="text-sage-200 hover:text-white transition-colors">
-                    Home Organization
                   </Link>
                 </li>
                 <li>
@@ -132,9 +128,9 @@ export default function Layout({ children, currentPageName }) {
             <div>
               <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
               <div className="space-y-3 text-sm">
-                <a href="tel:937-272-2344" className="flex items-center space-x-2 text-sage-200 hover:text-white transition-colors">
+                <a href="tel:336-673-3759" className="flex items-center space-x-2 text-sage-200 hover:text-white transition-colors">
                   <Phone className="h-4 w-4" />
-                  <span>937-272-2344</span>
+                  <span>336-ORDERLY</span>
                 </a>
                 <a href="mailto:hello@orderly.living" className="flex items-center space-x-2 text-sage-200 hover:text-white transition-colors">
                   <Mail className="h-4 w-4" />
@@ -145,7 +141,10 @@ export default function Layout({ children, currentPageName }) {
           </div>
 
           <div className="border-t border-sage-800 mt-8 pt-8 text-center text-sm text-sage-300">
-            <p>&copy; {new Date().getFullYear()} Orderly Living. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Orderly.Living. All rights reserved.</p>
+            {import.meta.env.DEV && (
+              <p className="text-xs text-sage-500 mt-2">You're viewing the local dev build — your latest edits are here.</p>
+            )}
           </div>
         </div>
       </footer>
@@ -161,6 +160,9 @@ export default function Layout({ children, currentPageName }) {
           --sage-900: #2A3D29;
           --gold-500: #D4A574;
           --gold-600: #C18F5E;
+          --brand: #B7A89C;
+          --brand-dark: #9D8E82;
+          --brand-light: #D4CCC4;
         }
 
         .bg-cream-50 { background-color: var(--cream-50); }
@@ -174,9 +176,15 @@ export default function Layout({ children, currentPageName }) {
         .text-sage-600 { color: var(--sage-600); }
         .text-sage-700 { color: var(--sage-700); }
         .text-sage-800 { color: var(--sage-800); }
+        .text-brand { color: var(--brand); }
+        .text-brand-light { color: var(--brand-light); }
+        .text-brand-dark { color: var(--brand-dark); }
+        .hover\\:text-brand-dark:hover { color: var(--brand-dark); }
+        .logo-link:hover h1 { color: var(--brand-dark); }
         
         .border-sage-700 { border-color: var(--sage-700); }
         .border-sage-800 { border-color: var(--sage-800); }
+        .border-brand { border-color: var(--brand); }
         
         .hover\\:text-sage-600:hover { color: var(--sage-600); }
       `}</style>

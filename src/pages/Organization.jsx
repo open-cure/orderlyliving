@@ -17,19 +17,19 @@ export default function Organization() {
   const process = [
     {
       title: 'Assessment',
-      description: 'We walk through your space together and identify your goals and pain points'
+      description: 'We walk through your space with you, listening to your goals and identifying pain points.'
     },
     {
       title: 'Sort & Simplify',
-      description: 'Declutter with a judgment-free approach, keeping what serves you'
+      description: 'Decluttering is judgment-free — we keep what serves you and let go of what doesn\'t.'
     },
     {
       title: 'Systemize',
-      description: 'Create practical organizing systems that work for your lifestyle'
+      description: 'We create practical organizing systems that fit your life, routines, and home.'
     },
     {
       title: 'Maintain',
-      description: 'Learn easy habits to keep your space organized long-term'
+      description: 'We teach simple habits and tips to keep your space organized long-term.'
     }
   ];
 
@@ -43,7 +43,7 @@ export default function Organization() {
         image="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=800&q=80"
       >
         <p className="text-lg text-gray-700 mt-6 leading-relaxed">
-          From overwhelmed to organized. We create simple systems that bring clarity and calm to your home.
+          From feeling overwhelmed to living in clarity, we create simple, practical systems that bring calm and functionality to your home. Every space can be transformed into an organized area that works for you and your lifestyle.
         </p>
       </Hero>
 
@@ -57,11 +57,11 @@ export default function Organization() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-serif text-sage-900 mb-6">
+            <h2 className="text-4xl font-serif text-brand-dark mb-6">
               Spaces We Organize
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Every space in your home can be transformed into an organized, peaceful area that works for you.
+              From kitchens to closets, garages to offices — every space can become calm, functional, and organized.
             </p>
           </motion.div>
 
@@ -95,11 +95,11 @@ export default function Organization() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-serif text-sage-900 mb-4">
+            <h2 className="text-4xl font-serif text-brand-dark mb-4">
               Our Process
             </h2>
             <p className="text-lg text-gray-600">
-              A simple, proven approach to lasting organization
+              A simple, proven approach to lasting organization:
             </p>
           </motion.div>
 
@@ -142,7 +142,7 @@ export default function Organization() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-serif text-sage-900 mb-4">
+            <h2 className="text-4xl font-serif text-brand-dark mb-4">
               Service Options
             </h2>
             <p className="text-lg text-gray-600">
@@ -161,7 +161,7 @@ export default function Organization() {
               <div className="text-center mb-6">
                 <Package className="h-12 w-12 text-sage-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-serif text-sage-900 mb-2">Refresh</h3>
-                <p className="text-gray-600">Perfect for small spaces</p>
+                <p className="text-gray-600">Perfect for Small Spaces</p>
               </div>
               <ul className="space-y-3">
                 <li className="flex items-start">
@@ -174,7 +174,7 @@ export default function Organization() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-sage-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm text-gray-700">Quick wins & systems</span>
+                  <span className="text-sm text-gray-700">Quick wins & easy systems</span>
                 </li>
               </ul>
             </motion.div>
@@ -192,7 +192,7 @@ export default function Organization() {
               <div className="text-center mb-6">
                 <Sparkles className="h-12 w-12 text-gold-500 mx-auto mb-4" />
                 <h3 className="text-2xl font-serif text-sage-900 mb-2">Reset</h3>
-                <p className="text-gray-600">Ideal for medium projects</p>
+                <p className="text-gray-600">Ideal for Medium Projects</p>
               </div>
               <ul className="space-y-3">
                 <li className="flex items-start">
@@ -201,7 +201,7 @@ export default function Organization() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-gold-500 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm text-gray-700">Half or full day</span>
+                  <span className="text-sm text-gray-700">Half- or full-day session</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-gold-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -220,12 +220,12 @@ export default function Organization() {
               <div className="text-center mb-6">
                 <Package className="h-12 w-12 text-sage-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-serif text-sage-900 mb-2">Whole Home</h3>
-                <p className="text-gray-600">Comprehensive organizing</p>
+                <p className="text-gray-600">Comprehensive Organizing</p>
               </div>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-sage-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm text-gray-700">Multiple rooms & spaces</span>
+                  <span className="text-sm text-gray-700">Multiple rooms and spaces</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-sage-600 mr-2 mt-0.5 flex-shrink-0" />
@@ -249,7 +249,7 @@ export default function Organization() {
             <p className="text-gray-600">
               Not sure which package is right for you?
               <br />
-              <a href="tel:937-272-2344" className="text-sage-700 hover:text-sage-800 font-medium underline">
+              <a href="tel:336-673-3759" className="text-sage-700 hover:text-sage-800 font-medium underline">
                 Schedule a free consultation
               </a>{' '}
               to discuss your needs.
@@ -261,7 +261,7 @@ export default function Organization() {
       {/* CTA */}
       <ContactSection
         title="Ready for an Organized Home?"
-        subtitle="Let's create calm, functional spaces together"
+        subtitle="Schedule a free consultation to discuss your needs"
       />
     </div>
   );

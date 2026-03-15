@@ -163,7 +163,6 @@ export default function Results() {
               <TabsList className="bg-white border border-sage-200">
                 <TabsTrigger value="all">All Projects</TabsTrigger>
                 <TabsTrigger value="Transitions">Transitions</TabsTrigger>
-                <TabsTrigger value="Organization">Organization</TabsTrigger>
               </TabsList>
             </Tabs>
           </motion.div>

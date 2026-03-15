@@ -7,9 +7,26 @@ import { CheckCircle, Heart, Home, Sparkles } from 'lucide-react';
 
 export default function Transitions() {
   const howItWorks = [
-    'Free 30 Minute Consultation Call',
-    'Pre-Move Planning',
-    'Moving Day Setup | Clothes, Kitchen and Bath Essentials, Furniture and Artwork Placement'
+    {
+      title: 'Free Consultation Call',
+      description: 'We start with a complimentary 15–30 minute call to learn about your loved one — their history, what matters most to them, and what the transition looks like.'
+    },
+    {
+      title: 'Visiting the New Space',
+      description: "Amy visits the new living space in person to take measurements, assess the layout, and gather ideas — so every item brought in has a thoughtful, intentional place."
+    },
+    {
+      title: 'The Current Space',
+      description: "Amy works with you to identify the meaningful items to bring — the photos, keepsakes, and familiar pieces that will make the new space feel warm and personal from the moment they arrive."
+    },
+    {
+      title: 'Setting Up the Space',
+      description: "Amy handles every detail of the setup with care and intention — so that when your loved one walks in for the first time, it already feels like home."
+    },
+    {
+      title: 'Peace of Mind for the Whole Family',
+      description: "You can be fully present for your loved one, knowing every detail has been handled with compassion. And when the day is done, they can settle in for the night surrounded by the things they love — comfortable, familiar, and truly at home."
+    }
   ];
 
   const testimonials = [
@@ -32,7 +49,7 @@ export default function Transitions() {
       {/* Hero */}
       <Hero
         title="Senior Transition Support"
-        subtitle="Creating Calm, Comfort and Organization"
+        subtitle="Creating Calm, Comfort and Order"
         scriptText="for Life's Next Chapter"
         image="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=800&q=80"
       >
@@ -56,7 +73,7 @@ export default function Transitions() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-serif text-sage-900 mb-6">
+            <h2 className="text-4xl font-serif text-brand-dark mb-6">
               A Thoughtful Transition
             </h2>
             <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
@@ -138,7 +155,7 @@ export default function Transitions() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-serif text-sage-900 mb-4">
+            <h2 className="text-4xl font-serif text-brand-dark mb-4">
               How It Works
             </h2>
           </motion.div>
@@ -153,12 +170,13 @@ export default function Transitions() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex items-start space-x-4"
               >
-                <div className="bg-gold-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold flex-shrink-0">
+                <div className="bg-gold-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold flex-shrink-0 mt-1">
                   {index + 1}
                 </div>
-                <p className="text-lg text-gray-700 pt-1.5">
-                  {step}
-                </p>
+                <div>
+                  <h4 className="text-lg font-semibold text-sage-900 mb-1">{step.title}</h4>
+                  <p className="text-gray-700">{step.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -192,7 +210,7 @@ export default function Transitions() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-serif text-sage-900 mb-4">
+            <h2 className="text-4xl font-serif text-brand-dark mb-4">
               What Families Are Saying
             </h2>
           </motion.div>
@@ -226,8 +244,8 @@ export default function Transitions() {
 
       {/* CTA */}
       <ContactSection
-        title="Schedule Your Free Consultation"
-        subtitle="Call or text today to discuss your transition needs"
+        title="Ready to Schedule?"
+        subtitle="Serving Centerville, Dayton, and the surrounding areas. Call or text today to discuss your transition needs."
       />
     </div>
   );

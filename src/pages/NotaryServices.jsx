@@ -7,26 +7,27 @@ import notaryImage from '../images/notary.png';
 
 export default function NotaryServices() {
   const services = [
-    'Real Estate Documents',
-    'Loan Signings',
-    'Powers of Attorney',
-    'Living Wills & Advance Directives',
+    'Real estate documents',
+    'Loan signings',
+    'Powers of attorney',
+    'Living wills & advance directives',
     'Affidavits',
-    'Trusts & Estate Documents'
+    'Trusts & estate documents',
+    'And many other legal documents'
   ];
 
   return (
     <div className="bg-cream-50">
       {/* Hero */}
       <Hero
-        title="Notary Services"
-        subtitle="Professional, Reliable Support"
-        scriptText="for Life's Important Documents"
+        title="Loan Signing & Notary"
+        subtitle="Professional support for life's important documents"
+        scriptText={undefined}
         image={notaryImage}
         imagePosition="object-top"
       >
         <p className="text-lg text-gray-700 mt-6 leading-relaxed">
-          Secure, prompt, and convenient notary services for real estate transactions, estate planning, and important life documents.
+          Mobile notary services for real estate closings, estate planning, powers of attorney, and more. Bonded, insured, and available evenings and weekends.
         </p>
       </Hero>
 
@@ -40,16 +41,20 @@ export default function NotaryServices() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-serif text-sage-900 mb-6">
-              Trusted Notary Services
+            <h2 className="text-4xl font-serif text-brand-dark mb-6">
+              Trusted Loan Signing & Notary Services
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Whether you're closing on a home, planning your estate, or need important documents notarized, we provide professional service you can count on.
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+              Whether you are closing on a home, finalizing estate documents, or completing time-sensitive paperwork, you can expect steady guidance and dependable service.
             </p>
           </motion.div>
 
+          {/* What Sets Us Apart */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-serif text-sage-900 mb-8 text-center">What Sets Us Apart</h3>
+
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +66,7 @@ export default function NotaryServices() {
                 <Shield className="h-8 w-8 text-sage-700" />
               </div>
               <h3 className="text-lg font-semibold text-sage-900 mb-2">Bonded & Insured</h3>
-              <p className="text-gray-600 text-sm">Professional certification and full insurance coverage</p>
+              <p className="text-gray-600 text-sm">Professionally commissioned with full certification and insurance coverage for your peace of mind.</p>
             </motion.div>
 
             <motion.div
@@ -75,7 +80,7 @@ export default function NotaryServices() {
                 <MapPin className="h-8 w-8 text-sage-700" />
               </div>
               <h3 className="text-lg font-semibold text-sage-900 mb-2">Mobile Service</h3>
-              <p className="text-gray-600 text-sm">We come to you for maximum convenience</p>
+              <p className="text-gray-600 text-sm">We come to you — meeting you at the title company, your home, office, or any agreed upon location.</p>
             </motion.div>
 
             <motion.div
@@ -89,7 +94,7 @@ export default function NotaryServices() {
                 <Clock className="h-8 w-8 text-sage-700" />
               </div>
               <h3 className="text-lg font-semibold text-sage-900 mb-2">Flexible Hours</h3>
-              <p className="text-gray-600 text-sm">Evening and weekend appointments available</p>
+              <p className="text-gray-600 text-sm">Evening and weekend appointments available to fit your schedule, not the other way around.</p>
             </motion.div>
 
             <motion.div
@@ -103,8 +108,9 @@ export default function NotaryServices() {
                 <FileCheck className="h-8 w-8 text-sage-700" />
               </div>
               <h3 className="text-lg font-semibold text-sage-900 mb-2">Real Estate Focus</h3>
-              <p className="text-gray-600 text-sm">Specialized in real estate and property transactions</p>
+              <p className="text-gray-600 text-sm">Specialized experience in loan signings and property transactions for smooth, organized closings.</p>
             </motion.div>
+          </div>
           </div>
 
           {/* Services List */}
@@ -116,7 +122,7 @@ export default function NotaryServices() {
             className="bg-white rounded-2xl p-8 shadow-sm border border-sage-100"
           >
             <h3 className="text-2xl font-serif text-sage-900 mb-6 text-center">
-              Common Documents We Notarize
+              Documents We Notarize
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {services.map((service, index) => (
@@ -126,9 +132,6 @@ export default function NotaryServices() {
                 </div>
               ))}
             </div>
-            <p className="text-sm text-gray-500 mt-6 text-center italic">
-              And many other legal documents requiring notarization
-            </p>
           </motion.div>
         </div>
       </section>
