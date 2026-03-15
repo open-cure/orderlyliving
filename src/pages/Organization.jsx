@@ -186,7 +186,7 @@ export default function Organization() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="bg-white rounded-2xl p-8 shadow-lg border-2 border-gold-400 relative"
             >
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-azure text-white px-4 py-1 rounded-full text-sm font-medium">
                 Most Popular
               </div>
               <div className="text-center mb-6">

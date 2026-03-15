@@ -365,14 +365,14 @@ function ProjectForm({ project, onSave, onCancel }) {
                 <div key={m.id} className="relative group">
                   <img src={m.url} alt="Before" className="w-full h-32 object-cover rounded" />
                   {m.is_main && (
-                    <div className="absolute top-2 left-2 bg-gold-500 text-white text-xs px-2 py-1 rounded font-semibold">
+                    <div className="absolute top-2 left-2 bg-azure text-white text-xs px-2 py-1 rounded font-semibold">
                       Main
                     </div>
                   )}
                   <button
                     type="button"
                     onClick={() => handleSetMainImage(m.id, 'before_image')}
-                    className="absolute bottom-2 left-2 bg-gold-500 hover:bg-gold-600 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="absolute bottom-2 left-2 bg-azure hover:bg-azure-dark text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity"
                   >
                     Set Main
                   </button>
@@ -408,14 +408,14 @@ function ProjectForm({ project, onSave, onCancel }) {
                 <div key={m.id} className="relative group">
                   <img src={m.url} alt="After" className="w-full h-32 object-cover rounded" />
                   {m.is_main && (
-                    <div className="absolute top-2 left-2 bg-gold-500 text-white text-xs px-2 py-1 rounded font-semibold">
+                    <div className="absolute top-2 left-2 bg-azure text-white text-xs px-2 py-1 rounded font-semibold">
                       Main
                     </div>
                   )}
                   <button
                     type="button"
                     onClick={() => handleSetMainImage(m.id, 'after_image')}
-                    className="absolute bottom-2 left-2 bg-gold-500 hover:bg-gold-600 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="absolute bottom-2 left-2 bg-azure hover:bg-azure-dark text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity"
                   >
                     Set Main
                   </button>

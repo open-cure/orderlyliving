@@ -22,7 +22,7 @@ export default function Layout({ children, currentPageName }) {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to={createPageUrl('Home')} className="logo-link flex items-center space-x-2">
-              <h1 className="text-2xl font-serif font-light text-brand transition-colors" style={{letterSpacing: '0.15em'}}>Orderly<span style={{letterSpacing: 0, verticalAlign: '-0.1em'}}>.</span>Living</h1>
+              <h1 className="text-2xl font-serif font-medium text-brand transition-colors" style={{letterSpacing: '0.15em'}}>Orderly<span style={{letterSpacing: 0, verticalAlign: '-0.1em'}}>.</span>Living</h1>
             </Link>
 
             {/* Desktop Navigation */}
@@ -41,7 +41,7 @@ export default function Layout({ children, currentPageName }) {
                 </Link>
               ))}
               <a href="tel:336-673-3759"
-                className="bg-gold-500 hover:bg-gold-600 text-white px-6 py-2 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md"
+                className="bg-azure hover:bg-azure-dark text-white px-6 py-2 rounded-full text-sm font-medium transition-all shadow-sm hover:shadow-md"
               >
                 Call Now
               </a>
@@ -75,7 +75,7 @@ export default function Layout({ children, currentPageName }) {
               ))}
               <a
                 href="tel:336-673-3759"
-                className="block text-center bg-gold-500 hover:bg-gold-600 text-white px-4 py-2 rounded-full text-sm font-medium"
+                className="block text-center bg-azure hover:bg-azure-dark text-white px-4 py-2 rounded-full text-sm font-medium"
               >
                 Call Now
               </a>
@@ -93,7 +93,7 @@ export default function Layout({ children, currentPageName }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Brand */}
             <div>
-              <h3 className="text-2xl font-serif font-light text-brand-light mb-4" style={{letterSpacing: '0.15em'}}>Orderly<span style={{letterSpacing: 0, verticalAlign: '-0.1em'}}>.</span>Living</h3>
+              <h3 className="text-2xl font-serif font-medium text-brand-light mb-4" style={{letterSpacing: '0.15em'}}>Orderly<span style={{letterSpacing: 0, verticalAlign: '-0.1em'}}>.</span>Living</h3>
               <p className="text-sage-200 text-sm leading-relaxed">
                 Creating calm, comfort, and order for life's big changes.
               </p>
@@ -152,27 +152,34 @@ export default function Layout({ children, currentPageName }) {
       <style>{`
         :root {
           --cream-50: #FAF8F5;
+          --sage-50: #F5F7F4;
           --sage-100: #E8EDE7;
           --sage-200: #D1DDD0;
+          --sage-300: #9eb8c9;
           --sage-600: #6B8E6A;
           --sage-700: #567855;
           --sage-800: #3F5A3E;
           --sage-900: #2A3D29;
           --gold-500: #D4A574;
           --gold-600: #C18F5E;
-          --brand: #B7A89C;
+          --brand: #b7a89c;
           --brand-dark: #9D8E82;
           --brand-light: #D4CCC4;
+          --azure: #427898;
+          --azure-dark: #35607a;
         }
 
+        .bg-azure { background-color: var(--azure); }
+        .hover\\:bg-azure-dark:hover { background-color: var(--azure-dark); }
         .bg-cream-50 { background-color: var(--cream-50); }
+        .bg-sage-50 { background-color: var(--sage-50); }
         .bg-sage-100 { background-color: var(--sage-100); }
         .bg-sage-900 { background-color: var(--sage-900); }
         .bg-gold-500 { background-color: var(--gold-500); }
         .hover\\:bg-gold-600:hover { background-color: var(--gold-600); }
         
         .text-sage-200 { color: var(--sage-200); }
-        .text-sage-300 { color: #B8C8B7; }
+        .text-sage-300 { color: var(--sage-300); }
         .text-sage-600 { color: var(--sage-600); }
         .text-sage-700 { color: var(--sage-700); }
         .text-sage-800 { color: var(--sage-800); }

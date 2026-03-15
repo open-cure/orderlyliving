@@ -17,7 +17,7 @@ export default function Home() {
         title="Orderly.Living"
         subtitle="Creating calm, comfort, and order for life's big changes"
         location="Serving Centerville, Dayton, and surrounding areas"
-        scriptText={undefined}
+        scriptText="for Life's Big Changes"
         image={amyOnTheJob}
         imagePosition="object-[center_40%]"
       >
@@ -27,7 +27,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-4">
           <a
             href="tel:336-673-3759"
-            className="bg-gold-500 hover:bg-gold-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center"
+            className="bg-azure hover:bg-azure-dark text-white px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center"
           >
             <span>Schedule Free Consultation</span>
           </a>

@@ -29,7 +29,7 @@ export default function Hero({ title, subtitle, scriptText, location, image, ima
               </p>
             )}
             {scriptText && (
-              <p className="text-3xl sm:text-4xl font-script text-gold-600 mb-8 italic">
+              <p className="text-3xl sm:text-4xl font-script text-brand mb-8 italic">
                 {scriptText}
               </p>
             )}
@@ -58,9 +58,8 @@ export default function Hero({ title, subtitle, scriptText, location, image, ima
       </div>
 
       <style>{`
-        .bg-sage-50 { background-color: #F5F7F4; }
-        .text-gold-600 { color: var(--gold-600); }
-        .font-script { font-family: 'Dancing Script', cursive; }
+        .bg-sage-50 { background-color: var(--sage-50); }
+        .font-script { font-family: 'Great Vibes', cursive; }
       `}</style>
     </section>
   );

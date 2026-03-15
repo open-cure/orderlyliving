@@ -95,7 +95,7 @@ export default {
           300: '#fde047',
           400: '#facc15',
           500: '#d4a574',
-          600: '#ca8a04',
+          600: '#c18f5e',
           700: '#a16207',
           800: '#854d0e',
           900: '#713f12',
@@ -112,17 +112,32 @@ export default {
           800: '#96734a',
           900: '#795e3d',
         },
-        // Brand color: calm, neutral, mature, professional
+        // Brand colors from advertising material
         brand: {
-          DEFAULT: '#B7A89C',
+          DEFAULT: '#b7a89c', // Gray orange (logo / O frame)
           light: '#D4CCC4',
           lighter: '#E8E3DE',
           dark: '#9D8E82',
           darker: '#8A7B6F',
         },
+        azure: {
+          DEFAULT: '#427898',
+          light: '#5a8fad',
+          dark: '#35607a',
+        },
+        'light-orange': {
+          DEFAULT: '#edcdbb', // Light orange (pink)
+          light: '#f5e0d4',
+          dark: '#e0b8a0',
+        },
       },
       fontFamily: {
-        serif: ['EB Garamond', 'Garamond', 'Georgia', 'serif'],
+        // Logo: Cormorant Garamond Medium
+        serif: ['Cormorant Garamond', 'Garamond', 'Georgia', 'serif'],
+        // Body / writing: Lato
+        sans: ['Lato', 'sans-serif'],
+        // Cursive: Jimmy Script (Great Vibes used until Jimmy Script is added)
+        script: ['Great Vibes', 'cursive'],
       },
     },
   },

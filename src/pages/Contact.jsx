@@ -224,7 +224,7 @@ export default function Contact() {
 
                     <Button
                       type="submit"
-                      className="w-full bg-gold-500 hover:bg-gold-600 text-white py-6 text-lg"
+                      className="w-full bg-azure hover:bg-azure-dark text-white py-6 text-lg"
                     >
                       <Send className="mr-2 h-5 w-5" />
                       Send Message

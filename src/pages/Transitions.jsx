@@ -170,7 +170,7 @@ export default function Transitions() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex items-start space-x-4"
               >
-                <div className="bg-gold-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold flex-shrink-0 mt-1">
+                <div className="bg-azure text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold flex-shrink-0 mt-1">
                   {index + 1}
                 </div>
                 <div>
