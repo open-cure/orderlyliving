@@ -15,7 +15,7 @@ export default function Home() {
       {/* Hero Section */}
       <Hero
         title="Orderly.Living"
-        subtitle="Creating calm, comfort, and order for life's big changes"
+        subtitle="Creating calm, comfort, and order"
         location="Serving Centerville, Dayton, and surrounding areas"
         scriptText="for Life's Big Changes"
         image={amyOnTheJob}
@@ -54,7 +54,7 @@ export default function Home() {
               How We Help
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Whether you're closing on a home or navigating a loved one's move into senior living, Orderly.Living handles the details so you can focus on what matters — the excitement of a new home, or the comfort of a fresh start.
+              Compassionate support for seniors, families, and busy households
             </p>
           </motion.div>
 

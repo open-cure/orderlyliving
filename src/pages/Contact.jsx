@@ -79,7 +79,7 @@ export default function Contact() {
                       href="tel:336-673-3759"
                       className="text-lg text-sage-700 hover:text-sage-800 transition-colors"
                     >
-                      336-ORDERLY
+                      336-ORD-ERLY
                     </a>
                     <p className="text-sm text-gray-600 mt-1">Call or text anytime</p>
                   </div>
