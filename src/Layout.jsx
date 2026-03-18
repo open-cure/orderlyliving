@@ -22,7 +22,7 @@ export default function Layout({ children, currentPageName }) {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link to={createPageUrl('Home')} className="logo-link flex items-center space-x-2">
-              <h1 className="text-2xl font-serif font-medium text-brand transition-colors" style={{letterSpacing: '0.15em'}}>Orderly<span style={{letterSpacing: 0, verticalAlign: '-0.1em'}}>.</span>Living</h1>
+              <h1 className="text-2xl font-serif font-medium text-brand transition-colors tracking-widest">Orderly.Living</h1>
             </Link>
 
             {/* Desktop Navigation */}
@@ -93,7 +93,7 @@ export default function Layout({ children, currentPageName }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Brand */}
             <div>
-              <h3 className="text-2xl font-serif font-medium text-brand-light mb-4" style={{letterSpacing: '0.15em'}}>Orderly<span style={{letterSpacing: 0, verticalAlign: '-0.1em'}}>.</span>Living</h3>
+              <h3 className="text-2xl font-serif font-medium text-brand-light mb-4 tracking-widest">Orderly.Living</h3>
               <p className="text-sage-200 text-sm leading-relaxed">
                 Creating calm, comfort, and order for life's big changes.
               </p>
