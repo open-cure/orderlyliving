@@ -8,6 +8,8 @@ import { Home as HomeIcon, FileText, Heart, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import amyHeadshot from '../images/headshots/Amy-Final-Headshots-04.jpg';
 import heroElderlyCouple from '../images/elderly_couple_holding_hands.jpg';
+import heroTulip from '../images/tulip.jpg';
+import heroKeys from '../images/keys.jpg';
 
 export default function Home() {
   return (
@@ -17,7 +19,7 @@ export default function Home() {
         title="Orderly.Living"
         subtitle="Creating calm, comfort, and order"
         scriptText="for Life's Big Changes"
-        backgroundImage={heroElderlyCouple}
+        backgroundImage={[heroElderlyCouple, heroTulip, heroKeys]}
       >
         <p className="text-lg text-gray-700 mt-4 mb-6 leading-relaxed">
           Whether you're closing on a home or navigating a loved one's move into senior living, Orderly.Living handles the details so you can focus on what matters… the excitement of a new home, or the comfort of a fresh start.
@@ -107,22 +109,7 @@ export default function Home() {
                   Meet Amy
                 </h2>
               </div>
-              <p className="text-xl text-gray-700 font-medium leading-relaxed mb-6">
-                Helping Life's Transitions Feel Calm, Comfortable, and Orderly
-              </p>
-              
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Amy's passion for creating calm, intentional spaces comes from deeply personal experience. When her father, living with dementia, transitioned into assisted living, she and her sister carefully curated his new environment to match his cognitive needs. By surrounding him with family photos, heirlooms, artwork, and memorabilia, including his vintage car collection, they helped him reconnect with his past and feel a sense of familiarity and comfort. The moment he walked into the room, his eyes lit up — a spark of recognition and joy that reminded Amy how powerful thoughtfully organized spaces can be.
-              </p>
-              
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Her first client in the senior transitions space involved a couple moving into assisted living. Many seniors feel anxiety, fear, or loss during this process, but Amy was able to tailor their environment to what mattered most to them. She curated the husband's office with TWA memorabilia honoring his career as a pilot, and throughout the home displayed family photos, favorite artwork, and cherished personal items. By minimizing clutter while preserving meaningful objects, she created a warm, welcoming space. When the husband saw his new home, he said:
-              </p>
 
-              <blockquote className="text-xl font-medium text-brand-dark italic border-l-4 border-gold-500 pl-6 py-2 mb-6">
-                "Ahh… it feels like home."
-              </blockquote>
-              
               <p className="text-gray-700 leading-relaxed mb-6">
                 Moments like this cemented Amy's philosophy: transitions, whether big or small, can be exciting and joyful when approached thoughtfully.
               </p>
@@ -151,6 +138,13 @@ export default function Home() {
                 className="inline-flex items-center text-sage-700 hover:text-sage-800 font-medium transition-colors"
               >
                 <span>Get in touch</span>
+                <span className="ml-2">→</span>
+              </Link>
+              <Link
+                to={createPageUrl('MeetAmy')}
+                className="inline-flex items-center text-brand hover:text-brand-dark font-medium transition-colors ml-6"
+              >
+                <span>Read Amy's story</span>
                 <span className="ml-2">→</span>
               </Link>
             </motion.div>

@@ -49,6 +49,7 @@
  */
 import Contact from './pages/Contact';
 import Home from './pages/Home';
+import MeetAmy from './pages/MeetAmy';
 import NotaryServices from './pages/NotaryServices';
 // import Organization from './pages/Organization';
 import Results from './pages/Results';
@@ -60,6 +61,7 @@ import __Layout from './Layout.jsx';
 export const PAGES = {
     "Contact": Contact,
     "Home": Home,
+    "MeetAmy": MeetAmy,
     "NotaryServices": NotaryServices,
     // "Organization": Organization,
     "Results": Results,

@@ -9,6 +9,7 @@ export default function Layout({ children, currentPageName }) {
 
   const navItems = [
     { name: 'Home', path: 'Home' },
+    { name: 'Meet Amy', path: 'MeetAmy' },
     { name: 'Loan Signing & Notary', path: 'NotaryServices' },
     { name: 'Senior Transitions', path: 'Transitions' },
     { name: 'Results', path: 'Results' },
@@ -139,6 +140,11 @@ export default function Layout({ children, currentPageName }) {
             <div>
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-sm">
+                <li>
+                  <Link to={createPageUrl('MeetAmy')} className="text-sage-200 hover:text-white transition-colors">
+                    Meet Amy
+                  </Link>
+                </li>
                 <li>
                   <Link to={createPageUrl('NotaryServices')} className="text-sage-200 hover:text-white transition-colors">
                     Loan Signing & Notary
