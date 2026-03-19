@@ -93,7 +93,7 @@ export default function Layout({ children, currentPageName }) {
       {!cornerPopUpDismissed && (
         <div className="fixed bottom-6 right-6 z-40">
           <div
-            className="relative w-[300px] h-[116px] rounded-full border-[6px] border-[#B7A89C] bg-[#EDCDBB]/65 backdrop-blur-md shadow-lg flex flex-col items-center justify-center text-center px-6 py-3 font-serif"
+            className="relative w-[300px] rounded-full border-[6px] border-[#B7A89C] bg-[#EDCDBB]/65 backdrop-blur-md shadow-lg flex flex-col items-center justify-center text-center px-6 py-4 font-serif"
             style={{ fontFamily: 'EB Garamond, Garamond, Georgia, serif' }}
           >
             <button
@@ -108,8 +108,9 @@ export default function Layout({ children, currentPageName }) {
               <Phone className="h-4 w-4 shrink-0" />
               <span>Call or text 336-ORD-ERLY</span>
             </a>
-            <p className="text-xs font-medium italic leading-tight text-[#5c4a3d] whitespace-nowrap">
-              Serving Centerville, Dayton & surrounding areas
+            <p className="text-xs font-medium italic leading-snug text-[#5c4a3d] text-center">
+              <span className="block">Serving Centerville, Dayton</span>
+              <span className="block">& surrounding areas</span>
             </p>
           </div>
         </div>
