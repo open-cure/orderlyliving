@@ -104,11 +104,11 @@ export default function Layout({ children, currentPageName }) {
             >
               <X className="h-4 w-4" />
             </button>
-            <a href="tel:336-673-3759" className="text-[#5c4a3d] font-semibold hover:text-[#4a3c32] flex items-center justify-center gap-1.5 text-base mb-1 whitespace-nowrap">
+            <a href="tel:336-673-3759" className="text-[#5c4a3d] font-semibold hover:text-[#4a3c32] flex items-center justify-center gap-1.5 text-base mb-0 whitespace-nowrap">
               <Phone className="h-4 w-4 shrink-0" />
               <span>Call or text 336-ORD-ERLY</span>
             </a>
-            <p className="text-xs font-medium italic leading-snug text-[#5c4a3d] text-center">
+            <p className="text-xs font-medium italic leading-tight text-[#5c4a3d] text-center mt-0.5">
               <span className="block">Serving Centerville, Dayton</span>
               <span className="block">& surrounding areas</span>
             </p>

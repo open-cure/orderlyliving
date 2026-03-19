@@ -45,7 +45,7 @@ export default function ContactSection({ title = "Ready to Get Started?", subtit
             to={createPageUrl('Contact')}
             className="inline-flex items-center text-gray-700 hover:text-gray-900 transition-colors"
           >
-            <span>Or fill out our contact form</span>
+            <span>More contact info</span>
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </motion.div>

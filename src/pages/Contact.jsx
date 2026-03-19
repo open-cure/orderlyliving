@@ -1,35 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, Send, CheckCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Label } from '@/components/ui/label';
-import CalendlyEmbed from '../components/CalendlyEmbed';
+import { Phone, Mail } from 'lucide-react';
+// import CalendlyEmbed from '../components/CalendlyEmbed';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Form submission would go here
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-  };
-
-  const handleChange = (field, value) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
-
   return (
     <div className="bg-cream-50 min-h-screen">
       {/* Hero Section */}
@@ -102,8 +76,8 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Hours/Service Area */}
-              <div className="mt-12 bg-sage-50 rounded-2xl p-6 border border-sage-200">
+              {/* Hours/Service Area — commented out for now */}
+              {/* <div className="mt-12 bg-sage-50 rounded-2xl p-6 border border-sage-200">
                 <h3 className="font-semibold text-sage-900 mb-4">Service Information</h3>
                 <div className="space-y-3 text-sm text-gray-700">
                   <div className="flex justify-between">
@@ -119,17 +93,17 @@ export default function Contact() {
                     <span className="font-medium text-sage-700">30 minutes</span>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
-              {/* Calendly Scheduling */}
-              <div className="mt-8 bg-white rounded-2xl shadow-lg p-6 border border-sage-100">
+              {/* Calendly Scheduling — commented out for now */}
+              {/* <div className="mt-8 bg-white rounded-2xl shadow-lg p-6 border border-sage-100">
                 <h3 className="font-semibold text-sage-900 mb-4">Schedule Your Free Consultation</h3>
                 <CalendlyEmbed url="https://calendly.com/your-calendly-username/30min" />
-              </div>
+              </div> */}
             </motion.div>
 
-            {/* Contact Form */}
-            <motion.div
+            {/* Contact Form — commented out for now; use call or email */}
+            {/* <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -232,7 +206,7 @@ export default function Contact() {
                   </form>
                 )}
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </section>
