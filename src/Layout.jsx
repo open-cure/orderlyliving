@@ -93,7 +93,7 @@ export default function Layout({ children, currentPageName }) {
       {!cornerPopUpDismissed && (
         <div className="fixed bottom-6 right-6 z-40">
           <div
-            className="relative w-[280px] h-[108px] rounded-full border-[6px] border-[#B7A89C] bg-[#EDCDBB]/65 backdrop-blur-md shadow-lg flex flex-col items-center justify-center text-center px-5 py-3 font-serif"
+            className="relative w-[300px] h-[116px] rounded-full border-[6px] border-[#B7A89C] bg-[#EDCDBB]/65 backdrop-blur-md shadow-lg flex flex-col items-center justify-center text-center px-6 py-3 font-serif"
             style={{ fontFamily: 'EB Garamond, Garamond, Georgia, serif' }}
           >
             <button
@@ -104,18 +104,12 @@ export default function Layout({ children, currentPageName }) {
             >
               <X className="h-4 w-4" />
             </button>
-            <a href="tel:336-673-3759" className="text-[#5c4a3d] font-semibold hover:text-[#4a3c32] flex items-center justify-center gap-1.5 text-sm mb-1 whitespace-nowrap">
+            <a href="tel:336-673-3759" className="text-[#5c4a3d] font-semibold hover:text-[#4a3c32] flex items-center justify-center gap-1.5 text-base mb-1 whitespace-nowrap">
               <Phone className="h-4 w-4 shrink-0" />
               <span>Call or text 336-ORD-ERLY</span>
             </a>
-            <p className="text-xs font-medium italic leading-tight text-[#5c4a3d] flex flex-col items-center justify-center gap-0">
-              <span className="block">Serving Centerville, Dayton</span>
-              <span className="flex items-center justify-center gap-1">
-                & surrounding areas
-                <svg className="h-4 w-4 shrink-0 fill-[#5c4a3d]" viewBox="0 0 40 50" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                  <path d="M2 10 L38 5 L38 28 L34 46 L20 49 L6 46 L2 28 Z"/>
-                </svg>
-              </span>
+            <p className="text-xs font-medium italic leading-tight text-[#5c4a3d] whitespace-nowrap">
+              Serving Centerville, Dayton & surrounding areas
             </p>
           </div>
         </div>
