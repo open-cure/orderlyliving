@@ -67,7 +67,7 @@ export default function Hero({ title, subtitle, scriptText, location, image, bac
               </p>
             )}
             {scriptText && (
-              <p className={`font-script italic ${useBackground ? 'text-4xl sm:text-5xl text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)] mb-4 hero-text-stroke' : 'text-3xl sm:text-4xl text-brand mb-8'}`}>
+              <p className={`font-script ${useBackground ? 'text-5xl sm:text-6xl text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)] mb-4 hero-text-stroke' : 'text-4xl sm:text-5xl text-brand mb-8'}`}>
                 {scriptText}
               </p>
             )}
@@ -97,7 +97,7 @@ export default function Hero({ title, subtitle, scriptText, location, image, bac
 
       <style>{`
         .bg-sage-50 { background-color: var(--sage-50); }
-        .font-script { font-family: 'Jimmy Script', 'Great Vibes', cursive; }
+        .font-script { font-family: 'Jimmy Script', 'Great Vibes', cursive; font-weight: normal; font-style: normal; }
         .hero-text-stroke {
           -webkit-text-stroke: 2px rgba(0, 0, 0, 0.45);
           paint-order: stroke fill;

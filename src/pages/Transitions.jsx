@@ -223,7 +223,7 @@ export default function Transitions() {
             transition={{ duration: 0.6 }}
             className="mb-12 bg-sage-100 rounded-full p-8 md:p-12 text-center max-w-3xl mx-auto"
           >
-            <p className="text-4xl md:text-5xl font-script text-gold-800 italic">
+            <p className="text-5xl md:text-6xl font-script text-gold-800" style={{fontWeight: 'normal', fontStyle: 'normal'}}>
               "Aw, it's like home."
             </p>
             <p className="text-sage-700 mt-2">— Paul M., Resident</p>
