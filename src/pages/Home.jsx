@@ -7,7 +7,8 @@ import ContactSection from '../components/ContactSection';
 import { Home as HomeIcon, FileText, Heart, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import amyHeadshot from '../images/headshots/Amy-Final-Headshots-04.jpg';
-import amyOnTheJob from '../images/amy_on_the_job.jpeg';
+import heroElderlyCouple from '../images/elderly_couple_holding_hands.jpg';
+import heroCloud from '../images/cloud_pexels-pixabay-158163.jpg';
 
 export default function Home() {
   return (
@@ -16,26 +17,25 @@ export default function Home() {
       <Hero
         title="Orderly.Living"
         subtitle="Creating calm, comfort, and order"
-        location="Serving Centerville, Dayton, and surrounding areas"
         scriptText="for Life's Big Changes"
-        image={amyOnTheJob}
-        imagePosition="object-[center_40%]"
+        backgroundImage={[heroElderlyCouple, heroCloud]}
+        backgroundLightOverlayIndices={[1]}
       >
         <p className="text-lg text-gray-700 mt-4 mb-6 leading-relaxed">
           Whether you're closing on a home or navigating a loved one's move into senior living, Orderly.Living handles the details so you can focus on what matters… the excitement of a new home, or the comfort of a fresh start.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-4">
-          <a
-            href="tel:336-673-3759"
-            className="bg-azure hover:bg-azure-dark text-white px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center"
-          >
-            <span>Schedule Free Consultation</span>
-          </a>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mt-4">
           <Link
-            to={createPageUrl('Contact')}
-            className="bg-white hover:bg-gray-50 text-sage-800 px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center border border-sage-200"
+            to={createPageUrl('NotaryServices')}
+            className="bg-azure hover:bg-azure-dark text-white px-6 py-3 rounded-full text-xl font-medium transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center"
           >
-            <span>Learn More</span>
+            <span>Loan Signing & Notary</span>
+          </Link>
+          <Link
+            to={createPageUrl('Transitions')}
+            className="bg-white hover:bg-gray-50 text-sage-800 px-6 py-3 rounded-full text-xl font-medium transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center border border-sage-200"
+          >
+            <span>Senior Transitions</span>
           </Link>
         </div>
       </Hero>
