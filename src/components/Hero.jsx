@@ -97,27 +97,29 @@ export default function Hero({ title, subtitle, scriptText, location, image, bac
 
       <style>{`
         .bg-sage-50 { background-color: var(--sage-50); }
-        .font-script { font-family: 'Great Vibes', cursive; }
+        .font-script { font-family: 'Jimmy Script', 'Great Vibes', cursive; }
         .hero-text-stroke {
           -webkit-text-stroke: 2px rgba(0, 0, 0, 0.45);
           paint-order: stroke fill;
         }
         .hero-text-stroke-external {
+          /* Dark blue on same hue as azure (#427898), slightly lighter */
+          --stroke: 30, 55, 70;
           text-shadow:
-            0 0 1px rgba(0,0,0,0.4),
-            1px 0 0 rgba(0,0,0,0.35),
-            -1px 0 0 rgba(0,0,0,0.35),
-            0 1px 0 rgba(0,0,0,0.35),
-            0 -1px 0 rgba(0,0,0,0.35),
-            1px 1px 0 rgba(0,0,0,0.28),
-            -1px -1px 0 rgba(0,0,0,0.28),
-            1px -1px 0 rgba(0,0,0,0.28),
-            -1px 1px 0 rgba(0,0,0,0.28),
-            0 0 2px rgba(0,0,0,0.2),
-            2px 0 0 rgba(0,0,0,0.18),
-            -2px 0 0 rgba(0,0,0,0.18),
-            0 2px 0 rgba(0,0,0,0.18),
-            0 -2px 0 rgba(0,0,0,0.18);
+            0 0 1px rgba(var(--stroke), 0.4),
+            1px 0 0 rgba(var(--stroke), 0.35),
+            -1px 0 0 rgba(var(--stroke), 0.35),
+            0 1px 0 rgba(var(--stroke), 0.35),
+            0 -1px 0 rgba(var(--stroke), 0.35),
+            1px 1px 0 rgba(var(--stroke), 0.28),
+            -1px -1px 0 rgba(var(--stroke), 0.28),
+            1px -1px 0 rgba(var(--stroke), 0.28),
+            -1px 1px 0 rgba(var(--stroke), 0.28),
+            0 0 2px rgba(var(--stroke), 0.2),
+            2px 0 0 rgba(var(--stroke), 0.18),
+            -2px 0 0 rgba(var(--stroke), 0.18),
+            0 2px 0 rgba(var(--stroke), 0.18),
+            0 -2px 0 rgba(var(--stroke), 0.18);
         }
       `}</style>
     </section>

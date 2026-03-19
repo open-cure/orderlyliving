@@ -137,7 +137,7 @@ export default {
         // Body / writing: Lato
         sans: ['Lato', 'sans-serif'],
         // Cursive: Jimmy Script (Great Vibes used until Jimmy Script is added)
-        script: ['Great Vibes', 'cursive'],
+        script: ['Jimmy Script', 'Great Vibes', 'cursive'],
       },
     },
   },

@@ -8,22 +8,24 @@ export default function MeetAmy() {
   return (
     <div className="min-h-screen bg-cream-50">
       {/* Hero / Intro */}
-      <section className="py-20 bg-white">
+      <section className="pt-10 pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-            {/* Photo with O overlay */}
+            {/* Photo with O overlay — sticky column, centered in viewport minus nav */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7 }}
-              className="lg:sticky lg:top-24 flex justify-center"
+              className="lg:sticky hidden lg:flex"
+              style={{ top: 'calc((100vh - 670px) / 2)', height: 670, alignItems: 'center', justifyContent: 'center' }}
             >
-              <div className="relative flex items-center justify-center" style={{ width: 360, height: 360 }}>
+              {/* Locked group: O + photo centered together */}
+              <div className="relative flex items-center justify-center" style={{ width: 670, height: 670 }}>
                 {/* Circular photo */}
                 <div
                   className="rounded-full overflow-hidden shadow-xl"
-                  style={{ width: 300, height: 300, position: 'absolute' }}
+                  style={{ width: 516, height: 516, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
                 >
                   <img
                     src={amyHeadshot1}
@@ -32,26 +34,67 @@ export default function MeetAmy() {
                   />
                 </div>
 
-                {/* Cormorant Garamond "O" as decorative frame */}
+                {/* Cormorant Garamond "O" as decorative frame — filled with brand color */}
                 <span
                   aria-hidden="true"
                   style={{
                     position: 'absolute',
                     fontFamily: "'Cormorant Garamond', Garamond, Georgia, serif",
                     fontWeight: 300,
-                    fontSize: 380,
+                    fontSize: 824,
                     lineHeight: 1,
-                    color: 'transparent',
-                    WebkitTextStroke: '2px #B7A89C',
+                    color: '#B7A89C',
                     letterSpacing: 0,
                     userSelect: 'none',
                     pointerEvents: 'none',
                     top: '50%',
                     left: '50%',
-                    transform: 'translate(-50%, -50%)',
+                    transform: 'translate(-50%, calc(-50% - 5px))',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    width: '100%',
+                    textAlign: 'center',
+                  }}
+                >
+                  O
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Mobile: photo centered normally */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="flex justify-center lg:hidden"
+            >
+              <div className="relative flex items-center justify-center" style={{ width: 670, height: 670 }}>
+                <div
+                  className="rounded-full overflow-hidden shadow-xl"
+                  style={{ width: 516, height: 516, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
+                >
+                  <img
+                    src={amyHeadshot1}
+                    alt="Amy Skardon"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <span
+                  aria-hidden="true"
+                  style={{
+                    position: 'absolute',
+                    fontFamily: "'Cormorant Garamond', Garamond, Georgia, serif",
+                    fontWeight: 300,
+                    fontSize: 824,
+                    lineHeight: 1,
+                    color: '#B7A89C',
+                    letterSpacing: 0,
+                    userSelect: 'none',
+                    pointerEvents: 'none',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, calc(-50% - 5px))',
                     width: '100%',
                     textAlign: 'center',
                   }}
