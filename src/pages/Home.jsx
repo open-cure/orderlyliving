@@ -17,7 +17,6 @@ export default function Home() {
       {/* Hero Section */}
       <Hero
         title="Orderly.Living"
-        subtitle="Creating calm, comfort, and order"
         scriptText="for Life's Big Changes"
         backgroundImage={[heroElderlyCouple, heroTulip, heroKeys]}
       >

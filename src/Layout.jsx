@@ -109,8 +109,7 @@ export default function Layout({ children, currentPageName }) {
               <span>Call or text 336-ORD-ERLY</span>
             </a>
             <p className="text-xs font-medium italic leading-tight text-[#5c4a3d] text-center mt-0.5">
-              <span className="block">Serving Centerville, Dayton</span>
-              <span className="block">& surrounding areas</span>
+              Serving Southwest Ohio
             </p>
           </div>
         </div>
@@ -127,7 +126,7 @@ export default function Layout({ children, currentPageName }) {
                 Creating calm, comfort, and order for life's big changes.
               </p>
               <p className="text-sage-300 text-sm mt-2">
-                Serving Centerville, Dayton, and surrounding areas.
+                Serving Southwest Ohio
               </p>
             </div>
 

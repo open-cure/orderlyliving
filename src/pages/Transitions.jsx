@@ -245,7 +245,7 @@ export default function Transitions() {
       {/* CTA */}
       <ContactSection
         title="Ready to Schedule?"
-        subtitle="Serving Centerville, Dayton, and the surrounding areas. Call or text today to discuss your transition needs."
+        subtitle="Serving Southwest Ohio. Call or text today to discuss your transition needs."
       />
     </div>
   );
