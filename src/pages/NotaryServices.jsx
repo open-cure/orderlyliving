@@ -2,8 +2,9 @@ import React from 'react';
 import Hero from '../components/Hero';
 import ContactSection from '../components/ContactSection';
 import { motion } from 'framer-motion';
-import { FileCheck, MapPin, Shield, Clock } from 'lucide-react';
+import { FileCheck, MapPin, Clock } from 'lucide-react';
 import notaryImage from '../images/notary.png';
+import notaryPin from '../images/notary_pin_06740-NSA_Pin_2018.png';
 
 export default function NotaryServices() {
   const services = [
@@ -44,73 +45,76 @@ export default function NotaryServices() {
             <h2 className="text-4xl font-serif text-brand-dark mb-6">
               Trusted Loan Signing & Notary Services
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Whether you are closing on a home, finalizing estate documents, or completing time-sensitive paperwork, you can expect steady guidance and dependable service.
             </p>
           </motion.div>
 
-          {/* What Sets Us Apart */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-serif text-sage-900 mb-8 text-center">What Sets Us Apart</h3>
-
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-4">
+          {/* Pyramid: E&O + pin on top, three features below */}
+          <div className="mb-12 space-y-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0 }}
-              className="text-center"
+              className="flex justify-center"
             >
-              <div className="bg-sage-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="h-8 w-8 text-sage-700" />
+              <div className="text-center max-w-lg px-2">
+                <img
+                  src={notaryPin}
+                  alt="National Notary Association certified signing agent pin"
+                  className="mx-auto mb-4 h-24 w-24 sm:h-28 sm:w-28 object-contain drop-shadow-md"
+                />
+                <h3 className="text-lg font-semibold text-sage-900 mb-2">Bonded & Insured</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  $100,000 errors and omissions insured. Professionally commissioned with full certification for your peace of mind.
+                </p>
               </div>
-              <h3 className="text-lg font-semibold text-sage-900 mb-2">Bonded & Insured</h3>
-              <p className="text-gray-600 text-sm">Professionally commissioned with full certification and insurance coverage for your peace of mind.</p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-center"
-            >
-              <div className="bg-sage-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="h-8 w-8 text-sage-700" />
-              </div>
-              <h3 className="text-lg font-semibold text-sage-900 mb-2">Mobile Service</h3>
-              <p className="text-gray-600 text-sm">We come to you — meeting you at the title company, your home, office, or any agreed upon location.</p>
-            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-center"
+              >
+                <div className="bg-sage-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="h-8 w-8 text-sage-700" />
+                </div>
+                <h3 className="text-lg font-semibold text-sage-900 mb-2">Mobile Service</h3>
+                <p className="text-gray-600 text-sm">We come to you — meeting you at the title company, your home, office, or any agreed upon location.</p>
+              </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-center"
-            >
-              <div className="bg-sage-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="h-8 w-8 text-sage-700" />
-              </div>
-              <h3 className="text-lg font-semibold text-sage-900 mb-2">Flexible Hours</h3>
-              <p className="text-gray-600 text-sm">Evening and weekend appointments available to fit your schedule, not the other way around.</p>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-center"
+              >
+                <div className="bg-sage-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="h-8 w-8 text-sage-700" />
+                </div>
+                <h3 className="text-lg font-semibold text-sage-900 mb-2">Flexible Hours</h3>
+                <p className="text-gray-600 text-sm">Evening and weekend appointments available to fit your schedule, not the other way around.</p>
+              </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-center"
-            >
-              <div className="bg-sage-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FileCheck className="h-8 w-8 text-sage-700" />
-              </div>
-              <h3 className="text-lg font-semibold text-sage-900 mb-2">Real Estate Focus</h3>
-              <p className="text-gray-600 text-sm">Specialized experience in loan signings and property transactions for smooth, organized closings.</p>
-            </motion.div>
-          </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-center"
+              >
+                <div className="bg-sage-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FileCheck className="h-8 w-8 text-sage-700" />
+                </div>
+                <h3 className="text-lg font-semibold text-sage-900 mb-2">Real Estate Focus</h3>
+                <p className="text-gray-600 text-sm">Specialized experience in loan signings and property transactions for smooth, organized closings.</p>
+              </motion.div>
+            </div>
           </div>
 
           {/* Services List */}
