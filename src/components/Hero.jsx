@@ -95,9 +95,9 @@ export default function Hero({ title, subtitle, scriptText, location, image, ima
               className="relative w-full max-w-2xl lg:max-w-[min(100%,40rem)] mx-auto lg:mx-0 lg:ml-auto"
             >
               <div className="grid grid-cols-2 gap-2 sm:gap-3">
-                {dualPortraitImages.map((item, index) => (
+                {dualPortraitImages.map((item) => (
                   <div
-                    key={index}
+                    key={item.label}
                     className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-sage-100"
                   >
                     <img
@@ -105,11 +105,7 @@ export default function Hero({ title, subtitle, scriptText, location, image, ima
                       alt={`${title} — ${item.label}`}
                       className={`absolute inset-0 w-full h-full object-cover object-center ${imagePosition}`}
                     />
-                    <span
-                      className={`absolute bottom-2 bg-black/55 text-white text-xs font-medium px-2 py-1 rounded-md backdrop-blur-sm ${
-                        index === 0 ? 'left-2' : 'right-2'
-                      }`}
-                    >
+                    <span className="absolute top-2 right-2 bg-black/55 text-white text-xs font-medium px-2 py-1 rounded-md backdrop-blur-sm">
                       {item.label}
                     </span>
                   </div>
