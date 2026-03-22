@@ -18,7 +18,7 @@ export default function Home() {
       <Hero
         title="Orderly.Living"
         scriptText="for Life's Big Changes"
-        backgroundImage={[heroElderlyCouple, heroTulip, heroKeys]}
+        backgroundImage={[heroTulip, heroKeys, heroElderlyCouple]}
       >
         <p className="text-lg text-gray-700 mt-4 mb-6 leading-relaxed">
           Whether you're closing on a home or navigating a loved one's move into senior living, Orderly.Living handles the details so you can focus on what matters… the excitement of a new home, or the comfort of a fresh start.

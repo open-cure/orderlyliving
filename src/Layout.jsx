@@ -108,7 +108,7 @@ export default function Layout({ children, currentPageName }) {
               <Phone className="h-4 w-4 shrink-0" />
               <span>Call or text 336-ORD-ERLY</span>
             </a>
-            <p className="text-xs font-medium italic leading-tight text-[#5c4a3d] text-center mt-0.5">
+            <p className="text-base font-medium italic leading-tight text-[#5c4a3d] text-center mt-0.5">
               Serving Southwest Ohio
             </p>
           </div>
@@ -125,7 +125,7 @@ export default function Layout({ children, currentPageName }) {
               <p className="text-sage-200 text-sm leading-relaxed">
                 Creating calm, comfort, and order for life's big changes.
               </p>
-              <p className="text-sage-300 text-sm mt-2">
+              <p className="text-sage-300 text-base mt-2">
                 Serving Southwest Ohio
               </p>
             </div>

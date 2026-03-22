@@ -50,7 +50,6 @@ export default function Transitions() {
       <Hero
         title="Senior Transition Support"
         subtitle="Creating Calm, Comfort and Order"
-        scriptText="for Life's Next Chapter"
         image="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=800&q=80"
       >
         <div className="bg-sage-100 rounded-2xl p-6 mt-8 border-l-4 border-sage-600">
