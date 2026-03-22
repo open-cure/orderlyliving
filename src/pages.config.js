@@ -52,7 +52,8 @@ import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import NotaryServices from './pages/NotaryServices';
 // import Organization from './pages/Organization';
-import Results from './pages/Results';
+// Results page — re-enable import + PAGES entry when ready
+// import Results from './pages/Results';
 import Transitions from './pages/Transitions';
 import Admin from './pages/Admin';
 import __Layout from './Layout.jsx';
@@ -64,7 +65,7 @@ export const PAGES = {
     "AboutUs": AboutUs,
     "NotaryServices": NotaryServices,
     // "Organization": Organization,
-    "Results": Results,
+    // "Results": Results,
     "Transitions": Transitions,
     "Admin": Admin,
 }

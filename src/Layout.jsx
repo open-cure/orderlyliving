@@ -12,7 +12,7 @@ export default function Layout({ children, currentPageName }) {
     { name: 'Home', path: 'Home' },
     { name: 'Loan Signing & Notary', path: 'NotaryServices' },
     { name: 'Senior Transitions', path: 'Transitions' },
-    { name: 'Results', path: 'Results' },
+    // { name: 'Results', path: 'Results' }, // re-enable when Results page is live
     { name: 'About Us', path: 'AboutUs' },
     { name: 'Contact', path: 'Contact' }
   ];
@@ -119,13 +119,10 @@ export default function Layout({ children, currentPageName }) {
             </button>
             <a
               href="tel:336-673-3759"
-              className="text-[#5c4a3d] font-semibold hover:text-[#4a3c32] flex flex-col items-center justify-center gap-0.5 text-base mb-0"
+              className="text-[#5c4a3d] font-semibold hover:text-[#4a3c32] inline-flex items-center justify-center gap-1.5 text-base mb-0 whitespace-nowrap"
             >
-              <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
-                <Phone className="h-4 w-4 shrink-0" aria-hidden />
-                <span>Call or Text</span>
-              </span>
-              <span className="text-[0.95rem] font-medium whitespace-nowrap">336-673-3759</span>
+              <Phone className="h-4 w-4 shrink-0" aria-hidden />
+              <span>Call or Text 336-673-3759</span>
             </a>
             <p className="text-base font-medium italic leading-tight text-[#5c4a3d] text-center mt-0.5">
               Serving Southwest Ohio
@@ -163,11 +160,11 @@ export default function Layout({ children, currentPageName }) {
                     Senior Transitions
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to={createPageUrl('Results')} className="text-blue-100/90 hover:text-white transition-colors">
                     Results & Testimonials
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to={createPageUrl('AboutUs')} className="text-blue-100/90 hover:text-white transition-colors">
                     About Us

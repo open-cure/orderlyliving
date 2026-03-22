@@ -218,7 +218,7 @@ export default function Transitions() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-sage-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Optional light decorating touches (bedding, wallpaper, finishing details)</span>
+                  <span>Mobility &amp; Layout Considerations</span>
                 </li>
               </ul>
             </motion.div>
@@ -230,7 +230,7 @@ export default function Transitions() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-white rounded-2xl p-8 shadow-sm border border-sage-100"
             >
-              <Home className="h-12 w-12 text-sage-600 mb-4" />
+              <Home className="h-12 w-12 text-azure mb-4" />
               <h3 className="text-2xl font-serif text-sage-900 mb-4">Not Included</h3>
               <p className="text-gray-700 mb-4">
                 This service focuses on decision-making and setup, not physical moving:
