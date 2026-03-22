@@ -52,9 +52,6 @@ export default function Home() {
             <h2 className="text-4xl sm:text-5xl font-serif text-brand-dark mb-4">
               Our Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Compassionate support for seniors, families, and busy households
-            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
