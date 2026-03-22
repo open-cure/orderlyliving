@@ -4,7 +4,7 @@ import { createPageUrl } from '../utils';
 import { motion } from 'framer-motion';
 import amyHeadshot1 from '../images/headshots/Amy-Final-Headshots-01.jpg';
 
-export default function MeetAmy() {
+export default function AboutUs() {
   return (
     <div className="min-h-screen bg-cream-50">
       {/* Hero / Intro */}

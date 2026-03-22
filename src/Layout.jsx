@@ -10,10 +10,10 @@ export default function Layout({ children, currentPageName }) {
 
   const navItems = [
     { name: 'Home', path: 'Home' },
-    { name: 'Meet Amy', path: 'MeetAmy' },
     { name: 'Loan Signing & Notary', path: 'NotaryServices' },
     { name: 'Senior Transitions', path: 'Transitions' },
     { name: 'Results', path: 'Results' },
+    { name: 'About Us', path: 'AboutUs' },
     { name: 'Contact', path: 'Contact' }
   ];
 
@@ -112,10 +112,10 @@ export default function Layout({ children, currentPageName }) {
             <button
               type="button"
               onClick={() => setCornerPopUpCollapsed(true)}
-              className="absolute -top-1 -right-1 z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[#B7A89C] bg-[#F5EBE3] text-[#5c4a3d] shadow-md backdrop-blur-sm hover:bg-white hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7A89C] focus-visible:ring-offset-2 transition-all"
+              className="absolute -top-0.5 -right-0.5 z-10 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#B7A89C] bg-[#F5EBE3] text-[#5c4a3d] shadow-sm backdrop-blur-sm hover:bg-white hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7A89C] focus-visible:ring-offset-2 transition-all"
               aria-label="Minimize to phone icon"
             >
-              <X className="h-4 w-4" strokeWidth={2.25} aria-hidden />
+              <X className="h-3 w-3" strokeWidth={2.5} aria-hidden />
             </button>
             <a href="tel:336-673-3759" className="text-[#5c4a3d] font-semibold hover:text-[#4a3c32] flex items-center justify-center gap-1.5 text-base mb-0 whitespace-nowrap">
               <Phone className="h-4 w-4 shrink-0" />
@@ -148,11 +148,6 @@ export default function Layout({ children, currentPageName }) {
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link to={createPageUrl('MeetAmy')} className="text-sage-200 hover:text-white transition-colors">
-                    Meet Amy
-                  </Link>
-                </li>
-                <li>
                   <Link to={createPageUrl('NotaryServices')} className="text-sage-200 hover:text-white transition-colors">
                     Loan Signing & Notary
                   </Link>
@@ -165,6 +160,11 @@ export default function Layout({ children, currentPageName }) {
                 <li>
                   <Link to={createPageUrl('Results')} className="text-sage-200 hover:text-white transition-colors">
                     Results & Testimonials
+                  </Link>
+                </li>
+                <li>
+                  <Link to={createPageUrl('AboutUs')} className="text-sage-200 hover:text-white transition-colors">
+                    About Us
                   </Link>
                 </li>
               </ul>

@@ -137,7 +137,7 @@ export default function Home() {
                 <span className="ml-2">→</span>
               </Link>
               <Link
-                to={createPageUrl('MeetAmy')}
+                to={createPageUrl('AboutUs')}
                 className="inline-flex items-center text-brand hover:text-brand-dark font-medium transition-colors ml-6"
               >
                 <span>Read Amy's story</span>
