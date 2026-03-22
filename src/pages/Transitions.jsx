@@ -4,7 +4,8 @@ import TestimonialCard from '../components/TestimonialCard';
 import ContactSection from '../components/ContactSection';
 import { motion } from 'framer-motion';
 import { CheckCircle, Heart, Home, Sparkles } from 'lucide-react';
-import transitionsHeroImage from '../images/paboo_bed.jpeg';
+import pabooAfter from '../images/paboo_after.jpeg';
+import pabooBefore from '../images/paboo_before.jpeg';
 
 export default function Transitions() {
   const howItWorks = [
@@ -51,8 +52,10 @@ export default function Transitions() {
       <Hero
         title="Senior Transition Support"
         subtitle="Creating Calm, Comfort and Order"
-        image={transitionsHeroImage}
-        imagePortrait
+        dualPortraitImages={[
+          { src: pabooAfter, label: 'After' },
+          { src: pabooBefore, label: 'Before' },
+        ]}
       >
         <div className="bg-sage-100 rounded-2xl p-6 mt-8 border-l-4 border-sage-600 w-full">
           <p className="text-base text-gray-700 italic leading-snug">
@@ -64,7 +67,104 @@ export default function Transitions() {
         </div>
       </Hero>
 
-      {/* What We Do */}
+      {/* How It Works */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-serif text-brand-dark mb-4">
+              How It Works
+            </h2>
+          </motion.div>
+
+          <div className="space-y-6">
+            {howItWorks.map((step, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex items-start space-x-4"
+              >
+                <div className="bg-azure text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold flex-shrink-0 mt-1">
+                  {index + 1}
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-sage-900 mb-1">{step.title}</h4>
+                  <p className="text-gray-700">{step.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Pricing */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-16 bg-gradient-to-br from-sage-700 to-sage-800 rounded-2xl p-8 text-center text-white shadow-xl"
+          >
+            <Sparkles className="h-12 w-12 text-gold-400 mx-auto mb-4" />
+            <h3 className="text-2xl font-serif mb-2">Investment</h3>
+            <p className="text-4xl font-bold mb-2">$600 – $1,000</p>
+            <p className="text-sage-200 mb-4">Flat Project Fee for 1–2 Bedroom Moves</p>
+            <p className="text-sm text-sage-300">
+              Optional quotes available for larger or complex moves
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-sage-50">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-serif text-brand-dark mb-4">
+              What Families Are Saying
+            </h2>
+          </motion.div>
+
+          {/* Featured quote callout */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12 bg-sage-100 rounded-full p-8 md:p-12 text-center max-w-3xl mx-auto"
+          >
+            <p className="text-5xl md:text-6xl font-script text-gold-800" style={{fontWeight: 'normal', fontStyle: 'normal'}}>
+              "Aw, it's like home."
+            </p>
+            <p className="text-sage-700 mt-2">— Paul M., Resident</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard
+                key={index}
+                quote={testimonial.quote}
+                author={testimonial.author}
+                delay={index * 0.1}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* A Thoughtful Transition — What's Included / Not Included */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <motion.div
@@ -142,103 +242,6 @@ export default function Transitions() {
                 Most setups can be completed in one day.
               </p>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-serif text-brand-dark mb-4">
-              How It Works
-            </h2>
-          </motion.div>
-
-          <div className="space-y-6">
-            {howItWorks.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-start space-x-4"
-              >
-                <div className="bg-azure text-white rounded-full w-10 h-10 flex items-center justify-center font-semibold flex-shrink-0 mt-1">
-                  {index + 1}
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-sage-900 mb-1">{step.title}</h4>
-                  <p className="text-gray-700">{step.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Pricing */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mt-16 bg-gradient-to-br from-sage-700 to-sage-800 rounded-2xl p-8 text-center text-white shadow-xl"
-          >
-            <Sparkles className="h-12 w-12 text-gold-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-serif mb-2">Investment</h3>
-            <p className="text-4xl font-bold mb-2">$600 – $1,000</p>
-            <p className="text-sage-200 mb-4">Flat Project Fee for 1–2 Bedroom Moves</p>
-            <p className="text-sm text-sage-300">
-              Optional quotes available for larger or complex moves
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-sage-50">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-serif text-brand-dark mb-4">
-              What Families Are Saying
-            </h2>
-          </motion.div>
-
-          {/* Special Callout - Moved Above */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-12 bg-sage-100 rounded-full p-8 md:p-12 text-center max-w-3xl mx-auto"
-          >
-            <p className="text-5xl md:text-6xl font-script text-gold-800" style={{fontWeight: 'normal', fontStyle: 'normal'}}>
-              "Aw, it's like home."
-            </p>
-            <p className="text-sage-700 mt-2">— Paul M., Resident</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={index}
-                quote={testimonial.quote}
-                author={testimonial.author}
-                delay={index * 0.1}
-              />
-            ))}
           </div>
         </div>
       </section>

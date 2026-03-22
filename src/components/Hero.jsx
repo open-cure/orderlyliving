@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-export default function Hero({ title, subtitle, scriptText, location, image, imageCornerLabels, imagePortrait, backgroundImage, backgroundLightOverlayIndices = [], imagePosition = 'object-center', children }) {
+export default function Hero({ title, subtitle, scriptText, location, image, imageCornerLabels, imagePortrait, dualPortraitImages, backgroundImage, backgroundLightOverlayIndices = [], imagePosition = 'object-center', children }) {
   const images = Array.isArray(backgroundImage) ? backgroundImage : (backgroundImage ? [backgroundImage] : []);
   const useBackground = images.length > 0;
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,9 +56,11 @@ export default function Hero({ title, subtitle, scriptText, location, image, ima
               ? 'grid-cols-1 place-items-center'
               : image && imageCornerLabels
                 ? 'grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]'
-                : image && imagePortrait
-                  ? 'grid-cols-1 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)]'
-                  : 'grid-cols-1 lg:grid-cols-2'
+                : Array.isArray(dualPortraitImages) && dualPortraitImages.length === 2
+                  ? 'grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]'
+                  : image && imagePortrait
+                    ? 'grid-cols-1 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)]'
+                    : 'grid-cols-1 lg:grid-cols-2'
           }`}
         >
           {/* Text Content */}
@@ -84,8 +86,41 @@ export default function Hero({ title, subtitle, scriptText, location, image, ima
             {children}
           </motion.div>
 
+          {/* Two portrait photos side by side (e.g. After left, Before right) */}
+          {!useBackground && Array.isArray(dualPortraitImages) && dualPortraitImages.length === 2 && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative w-full max-w-2xl lg:max-w-[min(100%,40rem)] mx-auto lg:mx-0 lg:ml-auto"
+            >
+              <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                {dualPortraitImages.map((item, index) => (
+                  <div
+                    key={index}
+                    className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-sage-100"
+                  >
+                    <img
+                      src={item.src}
+                      alt={`${title} — ${item.label}`}
+                      className={`absolute inset-0 w-full h-full object-cover object-center ${imagePosition}`}
+                    />
+                    <span
+                      className={`absolute bottom-2 bg-black/55 text-white text-xs font-medium px-2 py-1 rounded-md backdrop-blur-sm ${
+                        index === 0 ? 'left-2' : 'right-2'
+                      }`}
+                    >
+                      {item.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gold-500 rounded-full opacity-20 blur-3xl pointer-events-none" aria-hidden />
+            </motion.div>
+          )}
+
           {/* Side image (only when no backgroundImage); optional corner labels (e.g. stitched before/after) */}
-          {!useBackground && image && (
+          {!useBackground && image && !(Array.isArray(dualPortraitImages) && dualPortraitImages.length === 2) && (
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
