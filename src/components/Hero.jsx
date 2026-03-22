@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-export default function Hero({ title, subtitle, scriptText, location, image, backgroundImage, backgroundLightOverlayIndices = [], imagePosition = 'object-center', children }) {
+export default function Hero({ title, subtitle, scriptText, location, image, imageCornerLabels, backgroundImage, backgroundLightOverlayIndices = [], imagePosition = 'object-center', children }) {
   const images = Array.isArray(backgroundImage) ? backgroundImage : (backgroundImage ? [backgroundImage] : []);
   const useBackground = images.length > 0;
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,7 +50,15 @@ export default function Hero({ title, subtitle, scriptText, location, image, bac
       )}
 
       <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 ${useBackground ? 'min-h-[85vh] flex flex-col items-center justify-center' : 'pt-12 pb-20 lg:pt-16 lg:pb-28'}`}>
-        <div className={`grid gap-12 items-center ${useBackground ? 'grid-cols-1 place-items-center' : 'grid-cols-1 lg:grid-cols-2'}`}>
+        <div
+          className={`grid gap-12 items-center ${
+            useBackground
+              ? 'grid-cols-1 place-items-center'
+              : image && imageCornerLabels
+                ? 'grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]'
+                : 'grid-cols-1 lg:grid-cols-2'
+          }`}
+        >
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -74,22 +82,42 @@ export default function Hero({ title, subtitle, scriptText, location, image, bac
             {children}
           </motion.div>
 
-          {/* Side image (only when no backgroundImage) */}
+          {/* Side image (only when no backgroundImage); optional corner labels (e.g. stitched before/after) */}
           {!useBackground && image && (
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
+              className={`relative w-full mx-auto lg:mx-0 ${
+                imageCornerLabels ? 'max-w-2xl lg:max-w-[min(100%,39rem)]' : 'max-w-xl'
+              }`}
             >
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <div
+                className={`relative rounded-2xl overflow-hidden shadow-2xl bg-sage-100 ${
+                  imageCornerLabels ? '' : 'aspect-[4/3]'
+                }`}
+              >
                 <img
                   src={image}
-                  alt={title}
-                  className={`w-full h-full object-cover ${imagePosition}`}
+                  alt={imageCornerLabels ? `${title} — before and after` : title}
+                  className={
+                    imageCornerLabels
+                      ? `w-full h-auto max-h-[min(48vh,420px)] object-cover ${imagePosition}`
+                      : `absolute inset-0 w-full h-full object-cover ${imagePosition}`
+                  }
                 />
+                {imageCornerLabels?.bottomLeft && (
+                  <span className="absolute bottom-2 left-2 bg-black/55 text-white text-xs font-medium px-2 py-1 rounded-md backdrop-blur-sm">
+                    {imageCornerLabels.bottomLeft}
+                  </span>
+                )}
+                {imageCornerLabels?.bottomRight && (
+                  <span className="absolute bottom-2 right-2 bg-black/55 text-white text-xs font-medium px-2 py-1 rounded-md backdrop-blur-sm">
+                    {imageCornerLabels.bottomRight}
+                  </span>
+                )}
               </div>
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gold-500 rounded-full opacity-20 blur-3xl"></div>
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gold-500 rounded-full opacity-20 blur-3xl pointer-events-none" aria-hidden />
             </motion.div>
           )}
         </div>

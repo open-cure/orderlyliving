@@ -5,7 +5,8 @@ import { Menu, X, Phone, Mail } from 'lucide-react';
 
 export default function Layout({ children, currentPageName }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [cornerPopUpDismissed, setCornerPopUpDismissed] = useState(false);
+  /** false = full card, true = compact phone circle (tap to expand) */
+  const [cornerPopUpCollapsed, setCornerPopUpCollapsed] = useState(false);
 
   const navItems = [
     { name: 'Home', path: 'Home' },
@@ -89,18 +90,30 @@ export default function Layout({ children, currentPageName }) {
       {/* Page Content */}
       <main>{children}</main>
 
-      {/* Corner pop-up: frosted oval (brand O outline), bottom-right - dismissible */}
-      {!cornerPopUpDismissed && (
-        <div className="fixed bottom-6 right-6 z-40">
+      {/* Corner pop-up: full card or compact phone circle (same brand styling) */}
+      <div className="fixed bottom-6 right-6 z-40">
+        {cornerPopUpCollapsed ? (
+          <button
+            type="button"
+            onClick={() => setCornerPopUpCollapsed(false)}
+            className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full border-[6px] border-[#B7A89C] bg-[#EDCDBB]/65 backdrop-blur-md shadow-lg text-[#5c4a3d] hover:bg-[#EDCDBB]/85 hover:text-[#4a3c32] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7A89C] focus-visible:ring-offset-2"
+            aria-label="Expand call and contact info"
+            aria-expanded={false}
+          >
+            <Phone className="h-6 w-6 sm:h-7 sm:w-7 shrink-0" aria-hidden />
+          </button>
+        ) : (
           <div
-            className="relative w-[300px] rounded-full border-[6px] border-[#B7A89C] bg-[#EDCDBB]/65 backdrop-blur-md shadow-lg flex flex-col items-center justify-center text-center px-6 py-4 font-serif"
+            className="relative w-[300px] rounded-full border-[6px] border-[#B7A89C] bg-[#EDCDBB]/65 backdrop-blur-md shadow-lg flex flex-col items-center justify-center text-center px-6 py-4 font-serif transition-all"
             style={{ fontFamily: 'EB Garamond, Garamond, Georgia, serif' }}
+            role="dialog"
+            aria-label="Contact Orderly.Living"
           >
             <button
               type="button"
-              onClick={() => setCornerPopUpDismissed(true)}
+              onClick={() => setCornerPopUpCollapsed(true)}
               className="absolute top-1.5 right-2.5 p-0.5 rounded-full text-[#5c4a3d] hover:bg-[#5c4a3d]/15 transition-colors"
-              aria-label="Dismiss"
+              aria-label="Minimize to phone icon"
             >
               <X className="h-4 w-4" />
             </button>
@@ -112,8 +125,8 @@ export default function Layout({ children, currentPageName }) {
               Serving Southwest Ohio
             </p>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       {/* Footer */}
       <footer className="bg-sage-900 text-white">

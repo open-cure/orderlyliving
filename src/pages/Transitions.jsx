@@ -4,6 +4,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import ContactSection from '../components/ContactSection';
 import { motion } from 'framer-motion';
 import { CheckCircle, Heart, Home, Sparkles } from 'lucide-react';
+import transitionsStitched from '../images/afterandbefore.png';
 
 export default function Transitions() {
   const howItWorks = [
@@ -50,13 +51,14 @@ export default function Transitions() {
       <Hero
         title="Senior Transition Support"
         subtitle="Creating Calm, Comfort and Order"
-        image="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=800&q=80"
+        image={transitionsStitched}
+        imageCornerLabels={{ bottomLeft: 'After', bottomRight: 'Before' }}
       >
-        <div className="bg-sage-100 rounded-2xl p-6 mt-8 border-l-4 border-sage-600">
-          <p className="text-lg text-gray-700 italic leading-relaxed">
+        <div className="bg-sage-100 rounded-2xl p-6 mt-8 border-l-4 border-sage-600 w-full">
+          <p className="text-base text-gray-700 italic leading-snug">
             "I help seniors select the items that matter most and bring those into their new space. We arrange everything with intention, so it feels familiar, beautiful, and immediately like home."
           </p>
-          <p className="text-sage-700 font-medium mt-3">
+          <p className="text-sage-700 text-sm font-medium mt-2">
             — Amy Skardon
           </p>
         </div>
