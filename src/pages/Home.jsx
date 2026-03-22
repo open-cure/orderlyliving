@@ -50,7 +50,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-serif text-brand-dark mb-4">
-              How We Help
+              Our Services
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Compassionate support for seniors, families, and busy households
