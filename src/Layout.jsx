@@ -104,7 +104,7 @@ export default function Layout({ children, currentPageName }) {
           </button>
         ) : (
           <div
-            className="relative w-[300px] rounded-full border-[6px] border-[#B7A89C] bg-[#EDCDBB]/65 backdrop-blur-md shadow-lg flex flex-col items-center justify-center text-center px-6 py-4 font-serif transition-all"
+            className="relative w-[300px] overflow-visible rounded-full border-[6px] border-[#B7A89C] bg-[#EDCDBB]/65 backdrop-blur-md shadow-lg flex flex-col items-center justify-center text-center px-6 py-4 font-serif transition-all"
             style={{ fontFamily: 'EB Garamond, Garamond, Georgia, serif' }}
             role="dialog"
             aria-label="Contact Orderly.Living"
@@ -112,14 +112,14 @@ export default function Layout({ children, currentPageName }) {
             <button
               type="button"
               onClick={() => setCornerPopUpCollapsed(true)}
-              className="absolute top-1.5 right-2.5 p-0.5 rounded-full text-[#5c4a3d] hover:bg-[#5c4a3d]/15 transition-colors"
+              className="absolute -top-1 -right-1 z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[#B7A89C] bg-[#F5EBE3] text-[#5c4a3d] shadow-md backdrop-blur-sm hover:bg-white hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B7A89C] focus-visible:ring-offset-2 transition-all"
               aria-label="Minimize to phone icon"
             >
-              <X className="h-4 w-4" />
+              <X className="h-4 w-4" strokeWidth={2.25} aria-hidden />
             </button>
             <a href="tel:336-673-3759" className="text-[#5c4a3d] font-semibold hover:text-[#4a3c32] flex items-center justify-center gap-1.5 text-base mb-0 whitespace-nowrap">
               <Phone className="h-4 w-4 shrink-0" />
-              <span>Call or text 336-ORD-ERLY</span>
+              <span>Call or Text 336-673-3759</span>
             </a>
             <p className="text-base font-medium italic leading-tight text-[#5c4a3d] text-center mt-0.5">
               Serving Southwest Ohio
