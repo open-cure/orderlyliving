@@ -43,6 +43,10 @@ export default function Transitions() {
     {
       quote: "He's been giving tours to all the employees. You are amazing.",
       author: "Meaghan C."
+    },
+    {
+      quote: "He loves his room. That is a saving grace, thanks to you.",
+      author: "Katie C., Loved One"
     }
   ];
 
@@ -162,7 +166,7 @@ export default function Transitions() {
             <p className="text-azure-dark mt-2">— Paul M., Resident</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard
                 key={index}
@@ -230,7 +234,7 @@ export default function Transitions() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-white rounded-2xl p-8 shadow-sm border border-sage-100"
             >
-              <Home className="h-12 w-12 text-azure mb-4" />
+              <Home className="h-12 w-12 text-cream-900 mb-4" />
               <h3 className="text-2xl font-serif text-sage-900 mb-4">Not Included</h3>
               <p className="text-gray-700 mb-4">
                 This service focuses on decision-making and setup, not physical moving:
