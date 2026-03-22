@@ -7,6 +7,12 @@ import notaryImage from '../images/notary.png';
 import notaryPin from '../images/notary_pin_06740-NSA_Pin_2018.png';
 
 export default function NotaryServices() {
+  const certifications = [
+    'Secretary of State Commissioned Notary',
+    'Notary2Pro Certified',
+    'National Notary Association Certified',
+  ];
+
   const services = [
     'Real estate documents',
     'Loan signings',
@@ -69,6 +75,15 @@ export default function NotaryServices() {
                 <p className="text-gray-600 text-sm leading-relaxed">
                   $100,000 errors and omissions insured. Professionally commissioned with full certification for your peace of mind.
                 </p>
+                <p className="mt-6 text-sm font-semibold text-sage-900">Certifications</p>
+                <ul className="mt-3 space-y-2.5 text-sm text-gray-600 text-left max-w-md mx-auto">
+                  {certifications.map((line) => (
+                    <li key={line} className="flex items-start gap-2.5">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500" aria-hidden />
+                      <span>{line}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
 
