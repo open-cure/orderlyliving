@@ -8,8 +8,8 @@ import { Home as HomeIcon, FileText, Heart, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import amyHeadshot from '../images/headshots/Amy-Final-Headshots-04.jpg';
 import heroElderlyCouple from '../images/elderly_couple_holding_hands.jpg';
-import heroTulip from '../images/tulip.jpg';
-import heroKeys from '../images/keys.jpg';
+import heroTulip from '../images/white_tulips.avif';
+import heroSignature from '../images/signature_pexels-pixabay-261621.jpg';
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       <Hero
         title="Orderly.Living"
         scriptText="for Life's Big Changes"
-        backgroundImage={[heroTulip, heroKeys, heroElderlyCouple]}
+        backgroundImage={[heroTulip, heroSignature, heroElderlyCouple]}
       >
         <p className="text-lg text-gray-700 mt-4 mb-6 leading-relaxed">
           Whether you're closing on a home or navigating a loved one's move into senior living, Orderly.Living handles the details so you can focus on what matters… the excitement of a new home, or the comfort of a fresh start.

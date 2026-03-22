@@ -11,7 +11,7 @@ export default function Hero({ title, subtitle, scriptText, location, image, ima
     if (images.length <= 1) return;
     const id = setInterval(() => {
       setCurrentIndex((i) => (i + 1) % images.length);
-    }, 10000);
+    }, 7000);
     return () => clearInterval(id);
   }, [images.length]);
 
