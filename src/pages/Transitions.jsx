@@ -4,7 +4,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import ContactSection from '../components/ContactSection';
 import { motion } from 'framer-motion';
 import { CheckCircle, Heart, Home, Sparkles } from 'lucide-react';
-import transitionsStitched from '../images/afterandbefore.png';
+import transitionsHeroImage from '../images/paboo_bed.jpeg';
 
 export default function Transitions() {
   const howItWorks = [
@@ -51,8 +51,8 @@ export default function Transitions() {
       <Hero
         title="Senior Transition Support"
         subtitle="Creating Calm, Comfort and Order"
-        image={transitionsStitched}
-        imageCornerLabels={{ bottomLeft: 'After', bottomRight: 'Before' }}
+        image={transitionsHeroImage}
+        imagePortrait
       >
         <div className="bg-sage-100 rounded-2xl p-6 mt-8 border-l-4 border-sage-600 w-full">
           <p className="text-base text-gray-700 italic leading-snug">

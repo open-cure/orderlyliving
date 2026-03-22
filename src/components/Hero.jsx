@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-export default function Hero({ title, subtitle, scriptText, location, image, imageCornerLabels, backgroundImage, backgroundLightOverlayIndices = [], imagePosition = 'object-center', children }) {
+export default function Hero({ title, subtitle, scriptText, location, image, imageCornerLabels, imagePortrait, backgroundImage, backgroundLightOverlayIndices = [], imagePosition = 'object-center', children }) {
   const images = Array.isArray(backgroundImage) ? backgroundImage : (backgroundImage ? [backgroundImage] : []);
   const useBackground = images.length > 0;
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,7 +56,9 @@ export default function Hero({ title, subtitle, scriptText, location, image, ima
               ? 'grid-cols-1 place-items-center'
               : image && imageCornerLabels
                 ? 'grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)]'
-                : 'grid-cols-1 lg:grid-cols-2'
+                : image && imagePortrait
+                  ? 'grid-cols-1 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)]'
+                  : 'grid-cols-1 lg:grid-cols-2'
           }`}
         >
           {/* Text Content */}
@@ -89,12 +91,20 @@ export default function Hero({ title, subtitle, scriptText, location, image, ima
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className={`relative w-full mx-auto lg:mx-0 ${
-                imageCornerLabels ? 'max-w-2xl lg:max-w-[min(100%,39rem)]' : 'max-w-xl'
+                imageCornerLabels
+                  ? 'max-w-2xl lg:max-w-[min(100%,39rem)]'
+                  : imagePortrait
+                    ? 'max-w-[min(100%,22rem)] sm:max-w-[min(100%,26rem)] lg:max-w-[min(100%,28rem)] mx-auto lg:ml-auto lg:mr-0'
+                    : 'max-w-xl'
               }`}
             >
               <div
                 className={`relative rounded-2xl overflow-hidden shadow-2xl bg-sage-100 ${
-                  imageCornerLabels ? '' : 'aspect-[4/3]'
+                  imageCornerLabels
+                    ? ''
+                    : imagePortrait
+                      ? 'aspect-[3/4] w-full'
+                      : 'aspect-[4/3]'
                 }`}
               >
                 <img
@@ -103,7 +113,9 @@ export default function Hero({ title, subtitle, scriptText, location, image, ima
                   className={
                     imageCornerLabels
                       ? `w-full h-auto max-h-[min(48vh,420px)] object-cover ${imagePosition}`
-                      : `absolute inset-0 w-full h-full object-cover ${imagePosition}`
+                      : imagePortrait
+                        ? `absolute inset-0 w-full h-full object-cover object-center ${imagePosition}`
+                        : `absolute inset-0 w-full h-full object-cover ${imagePosition}`
                   }
                 />
                 {imageCornerLabels?.bottomLeft && (
