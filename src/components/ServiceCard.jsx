@@ -14,9 +14,9 @@ export default function ServiceCard({ icon: Icon, title, description, pageName, 
       className="group"
     >
       <Link to={createPageUrl(pageName)}>
-        <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 h-full border border-sage-100 hover:border-sage-300 hover:-translate-y-1">
-          <div className="bg-sage-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-sage-200 transition-colors">
-            <Icon className="h-8 w-8 text-sage-700" />
+        <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 h-full border border-gray-100 hover:border-azure-200 hover:-translate-y-1">
+          <div className="bg-azure-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-azure-200 transition-colors">
+            <Icon className="h-8 w-8 text-azure" />
           </div>
           
           <h3 className="text-2xl font-serif text-sage-900 mb-3">
@@ -27,7 +27,7 @@ export default function ServiceCard({ icon: Icon, title, description, pageName, 
             {description}
           </p>
           
-          <div className="flex items-center text-sage-700 font-medium group-hover:text-sage-800 transition-colors">
+          <div className="flex items-center text-azure font-medium group-hover:text-azure-dark transition-colors">
             <span>Learn More</span>
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </div>

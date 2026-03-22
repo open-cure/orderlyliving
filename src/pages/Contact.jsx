@@ -44,30 +44,31 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-sage-100 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-6 w-6 text-sage-700" />
+                  <div className="bg-azure-100 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Phone className="h-6 w-6 text-azure" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-sage-900 mb-1">Phone</h3>
                     <a
                       href="tel:336-673-3759"
-                      className="text-lg text-sage-700 hover:text-sage-800 transition-colors"
+                      className="text-lg text-azure hover:text-azure-dark transition-colors flex flex-col items-start gap-0.5"
                     >
-                      336-ORD-ERLY
+                      <span>336-ORD-ERLY</span>
+                      <span className="text-base font-medium text-gray-800">336-673-3759</span>
                     </a>
                     <p className="text-sm text-gray-600 mt-1">Call or text anytime</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-sage-100 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-6 w-6 text-sage-700" />
+                  <div className="bg-azure-100 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Mail className="h-6 w-6 text-azure" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-sage-900 mb-1">Email</h3>
                     <a
                       href="mailto:hello@orderly.living"
-                      className="text-lg text-sage-700 hover:text-sage-800 transition-colors break-all"
+                      className="text-lg text-azure hover:text-azure-dark transition-colors break-all"
                     >
                       hello@orderly.living
                     </a>

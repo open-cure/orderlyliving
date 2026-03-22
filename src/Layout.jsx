@@ -36,8 +36,8 @@ export default function Layout({ children, currentPageName }) {
                   to={createPageUrl(item.path)}
                   className={`text-sm font-medium transition-colors ${
                     currentPageName === item.path
-                      ? 'text-sage-700 border-b-2 border-sage-700'
-                      : 'text-gray-700 hover:text-sage-600'
+                      ? 'text-azure border-b-2 border-azure'
+                      : 'text-gray-700 hover:text-azure-dark'
                   }`}
                 >
                   {item.name}
@@ -117,9 +117,15 @@ export default function Layout({ children, currentPageName }) {
             >
               <X className="h-3 w-3" strokeWidth={2.5} aria-hidden />
             </button>
-            <a href="tel:336-673-3759" className="text-[#5c4a3d] font-semibold hover:text-[#4a3c32] flex items-center justify-center gap-1.5 text-base mb-0 whitespace-nowrap">
-              <Phone className="h-4 w-4 shrink-0" />
-              <span>Call or Text 336-673-3759</span>
+            <a
+              href="tel:336-673-3759"
+              className="text-[#5c4a3d] font-semibold hover:text-[#4a3c32] flex flex-col items-center justify-center gap-0.5 text-base mb-0"
+            >
+              <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
+                <Phone className="h-4 w-4 shrink-0" aria-hidden />
+                <span>Call or Text</span>
+              </span>
+              <span className="text-[0.95rem] font-medium whitespace-nowrap">336-673-3759</span>
             </a>
             <p className="text-base font-medium italic leading-tight text-[#5c4a3d] text-center mt-0.5">
               Serving Southwest Ohio
@@ -129,16 +135,16 @@ export default function Layout({ children, currentPageName }) {
       </div>
 
       {/* Footer */}
-      <footer className="bg-sage-900 text-white">
+      <footer className="bg-azure-footer text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Brand */}
             <div>
               <h3 className="text-2xl font-serif font-medium text-brand-light mb-4 tracking-widest">Orderly.Living</h3>
-              <p className="text-sage-200 text-sm leading-relaxed">
+              <p className="text-blue-100/90 text-sm leading-relaxed">
                 Creating calm, comfort, and order for life's big changes.
               </p>
-              <p className="text-sage-300 text-base mt-2">
+              <p className="text-blue-200/80 text-base mt-2">
                 Serving Southwest Ohio
               </p>
             </div>
@@ -148,22 +154,22 @@ export default function Layout({ children, currentPageName }) {
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link to={createPageUrl('NotaryServices')} className="text-sage-200 hover:text-white transition-colors">
+                  <Link to={createPageUrl('NotaryServices')} className="text-blue-100/90 hover:text-white transition-colors">
                     Loan Signing & Notary
                   </Link>
                 </li>
                 <li>
-                  <Link to={createPageUrl('Transitions')} className="text-sage-200 hover:text-white transition-colors">
+                  <Link to={createPageUrl('Transitions')} className="text-blue-100/90 hover:text-white transition-colors">
                     Senior Transitions
                   </Link>
                 </li>
                 <li>
-                  <Link to={createPageUrl('Results')} className="text-sage-200 hover:text-white transition-colors">
+                  <Link to={createPageUrl('Results')} className="text-blue-100/90 hover:text-white transition-colors">
                     Results & Testimonials
                   </Link>
                 </li>
                 <li>
-                  <Link to={createPageUrl('AboutUs')} className="text-sage-200 hover:text-white transition-colors">
+                  <Link to={createPageUrl('AboutUs')} className="text-blue-100/90 hover:text-white transition-colors">
                     About Us
                   </Link>
                 </li>
@@ -174,11 +180,17 @@ export default function Layout({ children, currentPageName }) {
             <div>
               <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
               <div className="space-y-3 text-sm">
-                <a href="tel:336-673-3759" className="flex items-center space-x-2 text-sage-200 hover:text-white transition-colors">
-                  <Phone className="h-4 w-4" />
-                  <span>336-ORD-ERLY</span>
+                <a
+                  href="tel:336-673-3759"
+                  className="inline-flex flex-col items-start gap-0.5 text-blue-100/90 hover:text-white transition-colors"
+                >
+                  <span className="inline-flex items-center gap-2">
+                    <Phone className="h-4 w-4 shrink-0" />
+                    <span>336-ORD-ERLY</span>
+                  </span>
+                  <span className="pl-6 text-sm text-blue-200/85">336-673-3759</span>
                 </a>
-                <a href="mailto:hello@orderly.living" className="flex items-center space-x-2 text-sage-200 hover:text-white transition-colors">
+                <a href="mailto:hello@orderly.living" className="flex items-center space-x-2 text-blue-100/90 hover:text-white transition-colors">
                   <Mail className="h-4 w-4" />
                   <span>hello@orderly.living</span>
                 </a>
@@ -186,10 +198,10 @@ export default function Layout({ children, currentPageName }) {
             </div>
           </div>
 
-          <div className="border-t border-sage-800 mt-8 pt-8 text-center text-sm text-sage-300">
+          <div className="border-t border-azure-darker/80 mt-8 pt-8 text-center text-sm text-blue-200/75">
             <p>&copy; {new Date().getFullYear()} Orderly.Living. All rights reserved.</p>
             {import.meta.env.DEV && (
-              <p className="text-xs text-sage-500 mt-2">You're viewing the local dev build — your latest edits are here.</p>
+              <p className="text-xs text-blue-300/50 mt-2">You're viewing the local dev build — your latest edits are here.</p>
             )}
           </div>
         </div>

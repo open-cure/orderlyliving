@@ -93,8 +93,8 @@ export default function NotaryServices() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-center"
               >
-                <div className="bg-sage-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="h-8 w-8 text-sage-700" />
+                <div className="bg-azure-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="h-8 w-8 text-azure" />
                 </div>
                 <h3 className="text-lg font-semibold text-sage-900 mb-2">Mobile Service</h3>
                 <p className="text-gray-600 text-sm">We come to you — meeting you at the title company, your home, office, or any agreed upon location.</p>
@@ -107,8 +107,8 @@ export default function NotaryServices() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-center"
               >
-                <div className="bg-sage-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="h-8 w-8 text-sage-700" />
+                <div className="bg-azure-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="h-8 w-8 text-azure" />
                 </div>
                 <h3 className="text-lg font-semibold text-sage-900 mb-2">Flexible Hours</h3>
                 <p className="text-gray-600 text-sm">Evening and weekend appointments available to fit your schedule, not the other way around.</p>
@@ -121,8 +121,8 @@ export default function NotaryServices() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="text-center"
               >
-                <div className="bg-sage-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FileCheck className="h-8 w-8 text-sage-700" />
+                <div className="bg-azure-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FileCheck className="h-8 w-8 text-azure" />
                 </div>
                 <h3 className="text-lg font-semibold text-sage-900 mb-2">Real Estate Focus</h3>
                 <p className="text-gray-600 text-sm">Specialized experience in loan signings and property transactions for smooth, organized closings.</p>
@@ -136,7 +136,7 @@ export default function NotaryServices() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-2xl p-8 shadow-sm border border-sage-100"
+            className="bg-white rounded-2xl p-8 shadow-sm border border-azure-100"
           >
             <h3 className="text-2xl font-serif text-sage-900 mb-6 text-center">
               Documents We Notarize
@@ -183,7 +183,7 @@ export default function NotaryServices() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0 }}
-              className="bg-sage-50 rounded-xl p-6 text-center"
+              className="bg-azure-50 rounded-xl p-6 text-center"
             >
               <div className="text-3xl mb-3">📄</div>
               <h4 className="font-semibold text-sage-900 mb-2">Your Documents</h4>
@@ -197,7 +197,7 @@ export default function NotaryServices() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-sage-50 rounded-xl p-6 text-center"
+              className="bg-azure-50 rounded-xl p-6 text-center"
             >
               <div className="text-3xl mb-3">🪪</div>
               <h4 className="font-semibold text-sage-900 mb-2">Valid ID</h4>
@@ -211,7 +211,7 @@ export default function NotaryServices() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-sage-50 rounded-xl p-6 text-center"
+              className="bg-azure-50 rounded-xl p-6 text-center"
             >
               <div className="text-3xl mb-3">✓</div>
               <h4 className="font-semibold text-sage-900 mb-2">All Signers</h4>

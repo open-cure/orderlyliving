@@ -249,7 +249,7 @@ export default function Organization() {
             <p className="text-gray-600">
               Not sure which package is right for you?
               <br />
-              <a href="tel:336-673-3759" className="text-sage-700 hover:text-sage-800 font-medium underline">
+              <a href="tel:336-673-3759" className="text-azure hover:text-azure-dark font-medium underline">
                 Schedule a free consultation
               </a>{' '}
               to discuss your needs.

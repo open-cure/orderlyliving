@@ -18,7 +18,7 @@ export default function Hero({ title, subtitle, scriptText, location, image, ima
   const slidePercent = images.length > 0 ? 100 / images.length : 0;
 
   return (
-    <section className={`relative overflow-hidden ${useBackground ? 'min-h-[85vh]' : 'bg-gradient-to-br from-cream-50 to-sage-50'}`}>
+    <section className={`relative overflow-hidden ${useBackground ? 'min-h-[85vh]' : 'bg-gradient-to-br from-cream-50 to-azure-50'}`}>
       {/* Full-bleed background: single image or sliding carousel */}
       {useBackground && (
         <>
@@ -98,7 +98,7 @@ export default function Hero({ title, subtitle, scriptText, location, image, ima
                 {dualPortraitImages.map((item) => (
                   <div
                     key={item.label}
-                    className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-sage-100"
+                    className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-azure-100"
                   >
                     <img
                       src={item.src}
@@ -130,7 +130,7 @@ export default function Hero({ title, subtitle, scriptText, location, image, ima
               }`}
             >
               <div
-                className={`relative rounded-2xl overflow-hidden shadow-2xl bg-sage-100 ${
+                className={`relative rounded-2xl overflow-hidden shadow-2xl bg-azure-100 ${
                   imageCornerLabels
                     ? ''
                     : imagePortrait
@@ -167,7 +167,6 @@ export default function Hero({ title, subtitle, scriptText, location, image, ima
       </div>
 
       <style>{`
-        .bg-sage-50 { background-color: var(--sage-50); }
         .font-script { font-family: 'Jimmy Script', 'Great Vibes', cursive; font-weight: normal; font-style: normal; }
         .hero-text-stroke {
           -webkit-text-stroke: 2px rgba(0, 0, 0, 0.45);

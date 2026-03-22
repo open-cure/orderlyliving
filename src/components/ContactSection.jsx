@@ -34,7 +34,7 @@ export default function ContactSection({ title = "Ready to Get Started?", subtit
             
             <a
               href="mailto:hello@orderly.living"
-              className="flex items-center space-x-2 bg-white hover:bg-gray-50 text-sage-800 px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-xl hover:scale-105"
+              className="flex items-center space-x-2 bg-white hover:bg-gray-50 text-gray-800 px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-xl hover:scale-105"
             >
               <Mail className="h-5 w-5" />
               <span>Send Email</span>

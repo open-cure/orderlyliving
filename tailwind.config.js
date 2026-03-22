@@ -124,6 +124,12 @@ export default {
           DEFAULT: '#427898',
           light: '#5a8fad',
           dark: '#35607a',
+          darker: '#2a4f66',
+          /** Darker than `dark` — site footer background */
+          footer: '#1a3344',
+          50: '#f0f6fa',
+          100: '#dceaf4',
+          200: '#c5ddf0',
         },
         'light-orange': {
           DEFAULT: '#edcdbb', // Light orange (pink)

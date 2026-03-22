@@ -9,7 +9,7 @@ export default function TestimonialCard({ quote, author, delay = 0 }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className="bg-white rounded-2xl p-8 shadow-sm border border-sage-100 h-full"
+      className="bg-white rounded-2xl p-8 shadow-sm border border-azure-100 h-full"
     >
       <Quote className="h-10 w-10 text-gold-500 mb-4 opacity-50" />
       
@@ -17,7 +17,7 @@ export default function TestimonialCard({ quote, author, delay = 0 }) {
         "{quote}"
       </p>
       
-      <p className="text-sage-700 font-medium">
+      <p className="text-azure-dark font-medium">
         — {author}
       </p>
     </motion.div>

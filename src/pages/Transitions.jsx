@@ -57,11 +57,11 @@ export default function Transitions() {
           { src: pabooBefore, label: 'Before' },
         ]}
       >
-        <div className="bg-sage-100 rounded-2xl p-6 mt-8 border-l-4 border-sage-600 w-full">
+        <div className="bg-azure-100 rounded-2xl p-6 mt-8 border-l-4 border-azure w-full">
           <p className="text-base text-gray-700 italic leading-snug">
             "I help seniors select the items that matter most and bring those into their new space. We arrange everything with intention, so it feels familiar, beautiful, and immediately like home."
           </p>
-          <p className="text-sage-700 text-sm font-medium mt-2">
+          <p className="text-azure-dark text-sm font-medium mt-2">
             — Amy Skardon
           </p>
         </div>
@@ -109,13 +109,24 @@ export default function Transitions() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mt-16 bg-gradient-to-br from-sage-700 to-sage-800 rounded-2xl p-8 text-center text-white shadow-xl"
+            className="mt-16 bg-gradient-to-br from-sage-700 to-sage-800 rounded-2xl p-8 text-white shadow-xl"
           >
-            <Sparkles className="h-12 w-12 text-gold-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-serif mb-2">Investment</h3>
-            <p className="text-4xl font-bold mb-2">$600 – $1,000</p>
-            <p className="text-sage-200 mb-4">Flat Project Fee for 1–2 Bedroom Moves</p>
-            <p className="text-sm text-sage-300">
+            <Sparkles className="h-12 w-12 text-gold-400 mx-auto mb-4 text-center" />
+            <h3 className="text-2xl font-serif mb-6 text-center">Pricing</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0 md:divide-x md:divide-white/25 text-center">
+              <div className="px-2 md:pr-8">
+                <p className="text-lg font-semibold text-sage-100 mb-2">One bedroom</p>
+                <p className="text-3xl sm:text-4xl font-bold">$600 – $800</p>
+              </div>
+              <div className="px-2 md:pl-8">
+                <p className="text-lg font-semibold text-sage-100 mb-2">Two bedroom</p>
+                <p className="text-3xl sm:text-4xl font-bold">$800 – $1,000</p>
+              </div>
+            </div>
+            <p className="text-sage-200 mt-8 text-center text-sm sm:text-base">
+              One-time flat project fee per move — not ongoing payments.
+            </p>
+            <p className="text-sm text-sage-300 mt-3 text-center">
               Optional quotes available for larger or complex moves
             </p>
           </motion.div>
@@ -123,7 +134,7 @@ export default function Transitions() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-sage-50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-azure-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -143,12 +154,12 @@ export default function Transitions() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12 bg-sage-100 rounded-full p-8 md:p-12 text-center max-w-3xl mx-auto"
+            className="mb-12 bg-azure-100 rounded-full p-8 md:p-12 text-center max-w-3xl mx-auto"
           >
             <p className="text-5xl md:text-6xl font-script text-gold-800" style={{fontWeight: 'normal', fontStyle: 'normal'}}>
               "Aw, it's like home."
             </p>
-            <p className="text-sage-700 mt-2">— Paul M., Resident</p>
+            <p className="text-azure-dark mt-2">— Paul M., Resident</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
