@@ -72,18 +72,16 @@ export default function NotaryServices() {
                   className="mx-auto mb-4 h-24 w-24 sm:h-28 sm:w-28 object-contain drop-shadow-md"
                 />
                 <h3 className="text-lg font-semibold text-sage-900 mb-2">Bonded & Insured</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  $100,000 errors and omissions insured. Professionally commissioned with full certification for your peace of mind.
-                </p>
-                <p className="mt-6 text-sm font-semibold text-sage-900">Certifications</p>
-                <ul className="mt-3 space-y-2.5 text-sm text-gray-600 text-left max-w-md mx-auto">
+                <div className="text-gray-600 text-sm leading-relaxed text-center space-y-2">
+                  <p>
+                    $100,000 errors and omissions insured. Professionally commissioned with full certification for your peace of mind.
+                  </p>
                   {certifications.map((line) => (
-                    <li key={line} className="flex items-start gap-2.5">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500" aria-hidden />
-                      <span>{line}</span>
-                    </li>
+                    <p key={line} className="font-bold text-gray-800">
+                      {line}
+                    </p>
                   ))}
-                </ul>
+                </div>
               </div>
             </motion.div>
 
@@ -143,13 +141,19 @@ export default function NotaryServices() {
             <h3 className="text-2xl font-serif text-sage-900 mb-6 text-center">
               Documents We Notarize
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {services.map((service, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-gold-500 rounded-full flex-shrink-0"></div>
-                  <span className="text-gray-700">{service}</span>
-                </div>
-              ))}
+            <div className="mx-auto w-fit max-w-full">
+              {/* Side inset px-10; wider gutter between the two columns */}
+              <div className="grid grid-cols-[max-content] gap-x-14 gap-y-4 px-10 text-left md:grid-cols-[max-content_max-content] md:gap-x-16">
+                {services.map((service, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-start gap-3 text-left"
+                  >
+                    <div className="h-2 w-2 shrink-0 rounded-full bg-gold-500" aria-hidden />
+                    <span className="text-gray-700">{service}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
