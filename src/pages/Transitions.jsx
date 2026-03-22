@@ -32,16 +32,16 @@ export default function Transitions() {
 
   const testimonials = [
     {
-      quote: "I cannot tell you how many people have commented that it looks like they've lived there forever and that it's beautiful.",
-      author: "Melissa R., Referral Partner"
+      quote: "I cannot tell you how many people have commented that it looks like they've lived there forever and it's beautiful.",
+      author: "Melissa S., Nursing Home Referral Partner"
     },
     {
-      quote: "He loves his room. That is a saving grace – thanks to you.",
-      author: "Katie C., Loved One"
+      quote: "This was the best gift I could've given to my dad, surrounding him with items where he is cognitively. It awakened a spark in him that we hadn't seen in a long time.",
+      author: "Nancy S., Daughter of Resident"
     },
     {
       quote: "He's been giving tours to all the employees. You are amazing.",
-      author: "Katie C., Loved One"
+      author: "Meaghan C."
     }
   ];
 

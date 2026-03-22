@@ -115,18 +115,18 @@ export const resultsProjects = [
 export const testimonials = [
   {
     id: "t-001",
-    quote: "I cannot tell you how many people have commented that it looks like they've lived there forever and that it's beautiful.",
-    role: "Referral Partner",
-    name: "",
+    quote: "I cannot tell you how many people have commented that it looks like they've lived there forever and it's beautiful.",
+    role: "Melissa S.",
+    name: "Nursing Home Referral Partner",
     city: "",
     featured: true,
     category: "Transitions"
   },
   {
     id: "t-002",
-    quote: "He loves his room. That is a saving grace – thanks to you.",
-    role: "Loved One",
-    name: "",
+    quote: "This was the best gift I could've given to my dad, surrounding him with items where he is cognitively. It awakened a spark in him that we hadn't seen in a long time.",
+    role: "Nancy S.",
+    name: "Daughter of Resident",
     city: "",
     featured: false,
     category: "Transitions"
@@ -134,7 +134,7 @@ export const testimonials = [
   {
     id: "t-003",
     quote: "He's been giving tours to all the employees. You are amazing.",
-    role: "Loved One",
+    role: "Meaghan C.",
     name: "",
     city: "",
     featured: false,
