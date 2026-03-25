@@ -72,7 +72,7 @@ export default function Contact() {
                     >
                       hello@orderly.living
                     </a>
-                    <p className="text-sm text-gray-600 mt-1">We'll respond within 24 hours</p>
+                    <p className="text-sm text-gray-600 mt-1">We'll respond within 48 hours</p>
                   </div>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default function Contact() {
                       Thank You!
                     </h4>
                     <p className="text-gray-600">
-                      We'll get back to you within 24 hours.
+                      We'll get back to you within 48 hours.
                     </p>
                   </motion.div>
                 ) : (
